@@ -27,8 +27,9 @@ task board and indexes them.
 
 ## Status snapshot
 
-- **Where we are:** v1 one-pager **built, verified, committed, and pushed** to `origin/main`.
-  Not yet live: GitHub Pages and DNS still need configuring (T25).
+- **Where we are:** **LIVE** at https://tilinthecloud.com (and https://www.tilinthecloud.com,
+  which 301s to the apex). GitHub Pages serving with a valid Let's Encrypt cert
+  (CN=tilinthecloud.com) on all four edge IPs; Enforce HTTPS is on.
 - **Remote:** `git@github-personal:thiagoavadore/tilinthecloud-site.git` (uses the `github-personal`
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
@@ -51,6 +52,10 @@ task board and indexes them.
   reduced-motion + a11y basics.
 - [x] **T09** Stand up coordination: `BACKLOG.md` + MADR ADRs in `docs/decisions/` (ADR 0001).
 - [x] **T24** Commit v1 to `main` and push to `origin` (commit `664da1d`).
+- [x] **T25** Configure GitHub Pages + DNS (GoDaddy): removed LinkedIn forwarding and the parked
+  A record, added four apex A records to GitHub IPs, pointed `www` CNAME at `thiagoavadore.github.io`.
+  MX/SPF/DKIM left untouched.
+- [x] **T26** Enforce HTTPS enabled; cert active on all edges (verified HTTP 200 + valid cert).
 
 ### In progress
 | ID | Task | Owner | Since |
@@ -62,8 +67,6 @@ task board and indexes them.
 - [ ] **T21** Activate the contact form (FormSubmit, one confirmation click on first submission) or swap backend. `(needs: user)` See ADR 0006.
 - [ ] **T22** Confirm `writing.tilinthecloud.com` (Substack) resolves before launch. `(needs: user)`
 - [ ] **T23** Add real proof-strip numbers. No metrics invented yet (ADR 0008). `(needs: user)` publishable figures.
-- [ ] **T25** Configure GitHub Pages (Settings → Pages → main/root) + DNS: four apex A records + `www` CNAME. Do **not** touch MX.
-- [ ] **T26** Enable "Enforce HTTPS" once the Pages cert provisions.
 - [ ] **T27** (v2, optional) Open Graph / social share image (currently text-only OG tags).
 - [ ] **T28** (v2, optional) Custom `404.html` in the Three-Body style.
 - [ ] **T29** (v2, optional) Privacy-light analytics decision (none wired yet).
