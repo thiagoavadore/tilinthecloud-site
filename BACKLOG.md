@@ -27,8 +27,10 @@ task board and indexes them.
 
 ## Status snapshot
 
-- **Where we are:** v1 one-pager **built and verified locally**, not yet committed or deployed.
-  The working tree is left staged-ready; commit/deploy is "for later" per the brief (T24).
+- **Where we are:** v1 one-pager **built, verified, committed, and pushed** to `origin/main`.
+  Not yet live: GitHub Pages and DNS still need configuring (T25).
+- **Remote:** `git@github-personal:thiagoavadore/tilinthecloud-site.git` (uses the `github-personal`
+  SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
 - **Last updated:** 2026-06-06 by `claude` (initial build session).
@@ -48,6 +50,7 @@ task board and indexes them.
 - [x] **T08** Verify: 0 em dashes, no forbidden names, all assets HTTP 200, responsive screenshots,
   reduced-motion + a11y basics.
 - [x] **T09** Stand up coordination: `BACKLOG.md` + MADR ADRs in `docs/decisions/` (ADR 0001).
+- [x] **T24** Commit v1 to `main` and push to `origin` (commit `664da1d`).
 
 ### In progress
 | ID | Task | Owner | Since |
@@ -59,7 +62,6 @@ task board and indexes them.
 - [ ] **T21** Activate the contact form (FormSubmit, one confirmation click on first submission) or swap backend. `(needs: user)` See ADR 0006.
 - [ ] **T22** Confirm `writing.tilinthecloud.com` (Substack) resolves before launch. `(needs: user)`
 - [ ] **T23** Add real proof-strip numbers. No metrics invented yet (ADR 0008). `(needs: user)` publishable figures.
-- [ ] **T24** Commit v1 to `main` and push. `(needs: user)` go-ahead.
 - [ ] **T25** Configure GitHub Pages (Settings → Pages → main/root) + DNS: four apex A records + `www` CNAME. Do **not** touch MX.
 - [ ] **T26** Enable "Enforce HTTPS" once the Pages cert provisions.
 - [ ] **T27** (v2, optional) Open Graph / social share image (currently text-only OG tags).
