@@ -22,6 +22,9 @@ task board and indexes them.
    Never renumber or reuse either.
 5. **Flag user-blocked items** with `(needs: user)` and the exact input required, so anyone can
    see what is waiting on Thiago vs. what an agent can just do.
+6. **Triage the inbox.** New bugs and feature requests arrive as GitHub Issues labeled `triage`
+   (see [CONTRIBUTING.md](./CONTRIBUTING.md)). Before starting net-new work, convert open `triage`
+   issues into `T##` tasks here (or decline with a one-line reason). Don't let reports sit in limbo.
 
 ---
 
@@ -51,6 +54,8 @@ task board and indexes them.
 - [x] **T08** Verify: 0 em dashes, no forbidden names, all assets HTTP 200, responsive screenshots,
   reduced-motion + a11y basics.
 - [x] **T09** Stand up coordination: `BACKLOG.md` + MADR ADRs in `docs/decisions/` (ADR 0001).
+- [x] **T10** Set up issue-based intake: bug/feature issue forms, `CONTRIBUTING.md`, PR template,
+  triage flow into the board (ADR 0011).
 - [x] **T24** Commit v1 to `main` and push to `origin` (commit `664da1d`).
 - [x] **T25** Configure GitHub Pages + DNS (GoDaddy): removed LinkedIn forwarding and the parked
   A record, added four apex A records to GitHub IPs, pointed `www` CNAME at `thiagoavadore.github.io`.
@@ -100,3 +105,4 @@ Durable decisions are ADRs in [docs/decisions/](./docs/decisions/). Current inde
 | [0008](./docs/decisions/0008-no-invented-outcome-metrics.md) | No invented outcome metrics on the proof strip | Accepted |
 | [0009](./docs/decisions/0009-booking-via-google-calendar.md) | Booking via Google Calendar appointment scheduling | Accepted |
 | [0010](./docs/decisions/0010-host-on-github-pages-apex.md) | Host on GitHub Pages at the apex domain | Accepted |
+| [0011](./docs/decisions/0011-issue-based-intake-triage.md) | Issue-based intake, triaged into the backlog | Accepted |

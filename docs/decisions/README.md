@@ -38,3 +38,4 @@ same session without touching the same file.
 | [0008](./0008-no-invented-outcome-metrics.md) | No invented outcome metrics on the proof strip | Accepted |
 | [0009](./0009-booking-via-google-calendar.md) | Booking via Google Calendar appointment scheduling | Accepted |
 | [0010](./0010-host-on-github-pages-apex.md) | Host on GitHub Pages at the apex domain | Accepted |
+| [0011](./0011-issue-based-intake-triage.md) | Issue-based intake, triaged into the backlog | Accepted |
