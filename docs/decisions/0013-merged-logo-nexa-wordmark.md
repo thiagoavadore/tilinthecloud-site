@@ -24,18 +24,20 @@ Adopt a merged logo: the three-body mark joined to **tilinthecloud** in Nexa Bol
 **outlined to vector paths** (via the installed font, through PDF, to SVG), so the logo is
 self-contained and needs no Nexa webfont (which also avoids web font-licensing).
 
-- **Brand asset files** (`assets/brand/`) use the **true brand colors**: orange `#F7941D`,
-  charcoal `#414042`. Primary, reversed, and mark-only, as SVG + PNG.
-- **On the site**, the logo is **recolored to the site palette** (copper `#CC7A3B` + bone) so it
-  fits the dark header. This keeps the muted, premium site identity from ADR 0003; the logo adapts
-  to the site rather than the site adopting the brighter brand orange.
-- Header (`index.html` + `404.html`) and the favicon now use the new mark; UI type stays Clash
-  Display + Switzer (ADR 0005 unchanged), Nexa is logo-only.
+- **One accent color everywhere: copper `#CC7A3B`** (with charcoal `#414042` for "thecloud" on
+  light backgrounds, bone on dark). The brand asset files (`assets/brand/`), the on-site header
+  logo, the favicon, and the rest of the site all use copper, so the identity is unified across the
+  website, the logo files, and social.
+- The original Fiverr wordmark was bright orange `#F7941D`; that is **superseded here by the site's
+  copper**. The orange originals remain in Thiago's source files if ever needed.
+- Header (`index.html` + `404.html`) and the favicon use the new mark; UI type stays Clash Display +
+  Switzer (ADR 0005 unchanged), Nexa is logo-only.
 
 ## Consequences
 
-- **Good:** brand continuity (the original wordmark returns), a reusable brand asset set, and a
-  self-contained outlined logo with no font dependency or license issue on the web.
-- **Cost / risk:** the on-site logo color (copper) differs from the brand files (orange). This is a
-  deliberate, accepted mismatch. If we later unify, switch the site's `--copper` token to `#F7941D`.
+- **Good:** brand continuity (the original wordmark returns), one accent color across every
+  touchpoint (no website-vs-logo mismatch), and a self-contained outlined logo with no font
+  dependency or license issue on the web.
+- **Cost / risk:** the logo drops the original bright orange. Accepted: copper reads more premium
+  for the CTO audience (ADR 0003), and one unified color beats matching the legacy tone.
 - **Follow-ups:** none required.
