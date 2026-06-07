@@ -12,23 +12,23 @@
        box-shadow:0 0 0 3px rgba(15,19,24,.9), 0 0 34px rgba(204,122,59,.45),
                   inset 0 0 60px rgba(15,19,24,.55); }
   /* three-body mark badge, bottom-right, kept inside the inscribed circle */
-  .badge{ position:absolute; left:565px; top:650px; transform:translate(-50%,-50%);
-          width:138px; height:138px; border-radius:50%;
+  .badge{ position:absolute; left:560px; top:648px; transform:translate(-50%,-50%);
+          width:150px; height:150px; border-radius:50%;
           background:radial-gradient(70% 70% at 50% 45%, #161B23 0%, #0F1318 100%);
           border:4px solid var(--copper);
-          box-shadow:0 6px 18px rgba(0,0,0,.5), 0 0 18px rgba(204,122,59,.4);
+          box-shadow:0 6px 18px rgba(0,0,0,.5), 0 0 22px rgba(204,122,59,.45);
           display:flex; align-items:center; justify-content:center; }
-  .badge svg{ width:96px; height:96px; overflow:visible; }
-  .badge .ring{ stroke:#5a6577; stroke-width:3; }
-  .badge .body{ filter:drop-shadow(0 0 5px rgba(204,122,59,.6)); }
-  .badge .core{ filter:drop-shadow(0 0 8px rgba(204,122,59,.8)); }
+  .badge svg{ width:108px; height:108px; overflow:visible; }
+  .badge .ring{ stroke:#8E99AD; stroke-width:5; }
+  .badge .body{ stroke-width:3; filter:drop-shadow(0 0 6px rgba(204,122,59,.65)); }
+  .badge .core{ filter:drop-shadow(0 0 10px rgba(204,122,59,.85)); }
 </style></head>
 <body>
   <div class="ph"></div>
   <div class="ring-frame"></div>
   <div class="badge"><svg viewBox="0 0 400 400">
-    <g transform="rotate(0 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="18"/></g>
-    <g transform="rotate(60 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="18"/></g>
-    <g transform="rotate(120 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="18"/></g>
-    <circle class="core" cx="200" cy="200" r="26"/></svg></div>
+    <g transform="rotate(0 200 200)"><ellipse class="ring" cx="200" cy="200" rx="158" ry="60"/><circle class="body" cx="358" cy="200" r="21"/></g>
+    <g transform="rotate(60 200 200)"><ellipse class="ring" cx="200" cy="200" rx="158" ry="60"/><circle class="body" cx="358" cy="200" r="21"/></g>
+    <g transform="rotate(120 200 200)"><ellipse class="ring" cx="200" cy="200" rx="158" ry="60"/><circle class="body" cx="358" cy="200" r="21"/></g>
+    <circle class="core" cx="200" cy="200" r="30"/></svg></div>
 </body></html>
