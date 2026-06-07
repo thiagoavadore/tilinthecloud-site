@@ -40,8 +40,8 @@ task board and indexes them.
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
-- **Last updated:** 2026-06-07 by `claude` (social/share assets shipped: OG card live on-site; LinkedIn
-  set + favicon refined for small-size legibility and logo overlap. ADR 0014 + its Refinements note).
+- **Last updated:** 2026-06-07 by `claude` (T33: LinkedIn page copy drafts, company + personal, in
+  `assets/brand/social/`; needs user to finalize open questions and publish).
 
 ---
 
@@ -82,6 +82,13 @@ task board and indexes them.
   pre-rebrand cloud logo) + company cover + Thiago's brand-framed personal avatar + personal header
   ("Three bodies. One program." + CTA). PNGs in `assets/brand/social/`, regenerable from `social/src/`.
   ADR 0014. `(needs: user)` to upload the four LinkedIn images to LinkedIn (manual, off-repo).
+- [x] **T33** LinkedIn page *copy* (text companion to T32's visuals): drafts for the company page
+  (tagline, overview, specialties, custom button, Dutch tagline + overview) and Thiago's personal
+  profile (headline, About, top skills), synced to the brand/positioning and the voice +
+  confidentiality rules. In `assets/brand/social/linkedin-company-page-copy.md` and
+  `linkedin-personal-profile-copy.md`. `(needs: user)` to resolve the open questions in each file
+  (tagline persona vs thesis, Dutch register, specialties final pick, headline A/B/C, publish
+  timing) and paste into LinkedIn (manual, off-repo). No ADR yet; revisit once finalized.
 
 ### In progress
 | ID | Task | Owner | Since |
