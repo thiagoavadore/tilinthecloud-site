@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<style>
+  html,body{ width:1200px; height:630px; }
+  body{
+    width:1200px; height:630px; overflow:hidden; position:relative;
+    background:
+      radial-gradient(120% 90% at 82% 8%, rgba(58,72,92,.30) 0%, transparent 55%),
+      radial-gradient(90% 70% at 12% 96%, rgba(204,122,59,.16) 0%, transparent 55%),
+      var(--ink);
+    color:var(--bone); font-family:"Switzer",sans-serif;
+    display:grid; grid-template-columns:1fr 420px; align-items:center;
+  }
+  .content{ padding:78px 0 78px 88px; }
+  .eyebrow{ font-weight:500; font-size:22px; letter-spacing:.22em; text-transform:uppercase; color:var(--copper-lo); margin-bottom:30px; }
+  h1{ font-family:"Clash Display",serif; font-weight:600; font-size:82px; line-height:1.0; letter-spacing:-.01em; margin-bottom:30px; }
+  h1 .cop{ color:var(--copper); }
+  p.sub{ font-size:27px; line-height:1.42; color:var(--bone-dim); max-width:640px; font-weight:400; }
+  .foot{ position:absolute; left:88px; bottom:64px; display:flex; align-items:center; gap:16px;
+         font-family:"Clash Display",serif; font-weight:600; font-size:26px; color:var(--bone); }
+  .foot .dot{ width:9px; height:9px; border-radius:50%; background:var(--copper); }
+  .mark{ width:420px; height:100%; display:flex; align-items:center; justify-content:center; }
+  .mark svg{ width:360px; height:360px; overflow:visible; }
+  .core{ filter:drop-shadow(0 0 14px rgba(204,122,59,.65)); }
+</style></head>
+<body>
+  <div class="content">
+    <div class="eyebrow">The Three-Body Program</div>
+    <h1>One program.<br><span class="cop">Not three.</span></h1>
+    <p class="sub">Modernization, team redesign, and GenAI adoption, run together. Hands-on, with a number on the outcome.</p>
+  </div>
+  <div class="foot"><span class="dot"></span>tilinthecloud.com</div>
+  <div class="mark"><svg viewBox="0 0 400 400">
+    <g transform="rotate(0 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="13"/></g>
+    <g transform="rotate(60 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="13"/></g>
+    <g transform="rotate(120 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="13"/></g>
+    <circle class="core" cx="200" cy="200" r="19"/></svg></div>
+</body></html>
