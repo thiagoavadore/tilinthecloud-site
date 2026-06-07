@@ -71,6 +71,8 @@ task board and indexes them.
   explicit "Book a call" line goes to Calendar. (ADR 0009.)
 - [x] **T21** Contact form activated (FormSubmit confirmed; submissions now forward to info@). Kept
   FormSubmit, see ADR 0006.
+- [x] **T28** Custom `404.html` in the Three-Body style (broken-orbit mark, one body drifted out;
+  reuses the shared design system). Implementation, reuses ADR 0003, no new ADR.
 
 ### In progress
 | ID | Task | Owner | Since |
@@ -90,7 +92,6 @@ Grouped by priority (working-agreement rule 7). Triaged issues carry the matchin
 
 **Later**
 - [ ] **T27** Open Graph / social share image (currently text-only OG tags). (v2)
-- [ ] **T28** Custom `404.html` in the Three-Body style. (v2)
 - [ ] **T29** Privacy-light analytics decision (none wired yet). (v2)
 
 ---
