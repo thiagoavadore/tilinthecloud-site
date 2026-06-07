@@ -42,7 +42,13 @@ Thiago runs **modernization, team redesign, and GenAI adoption as ONE program**.
 
 ## Confidentiality (DO NOT VIOLATE)
 
-- **Never name [redacted-confidential] or [redacted-confidential]** on the site, in copy, comments, commit messages, or alt text.
+- **This entire repo is public.** GitHub Pages serves the whole tree (not just `index.html`), and the
+  git history is public too. Anything committed here, drafts in `assets/`, notes in `docs/`, anywhere,
+  is publicly fetchable. **Never commit internal, sensitive, or pre-announcement material.** Keep
+  drafts and private notes local and gitignored (`drafts-local/`, `CLAUDE.local.md`).
+- **Never name the two confidential former employers** on the site, in copy, comments, commit
+  messages, or alt text. Their names are deliberately kept out of this public repo; they live in the
+  gitignored `CLAUDE.local.md` for local enforcement.
 - Quotable proof that IS allowed: **GRESB, Nike, LINKIT, and "as a CTO".** Use only these for the proof strip.
 
 ## v1 sections

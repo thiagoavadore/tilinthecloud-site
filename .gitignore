@@ -12,3 +12,9 @@ Thumbs.db
 
 # Scratch render mockups (finals live in assets/brand/social/)
 build/
+
+# LOCAL ONLY — never commit. The whole repo is served publicly by GitHub Pages,
+# so internal/sensitive/pre-announcement material must stay off it.
+CLAUDE.local.md
+drafts-local/
+assets/brand/social/*-copy.md
