@@ -2,7 +2,7 @@
 
 The tilinthecloud logo: the three-body mark (from the site's "Three-Body System" direction)
 joined to the original wordmark. The wordmark is **Nexa Bold**, closed up to one word
-**tilinthecloud** ("tilin" orange, "thecloud" charcoal).
+**tilinthecloud** ("tilin" copper, "thecloud" charcoal).
 
 The wordmark in the SVGs is **outlined to vector paths**, so the files are self-contained and need
 no font installed to render (and no Nexa webfont license to use them on the web).
@@ -22,10 +22,13 @@ PNGs are transparent. Regenerate from the SVGs with `rsvg-convert -w <width> in.
 
 | Token | Hex | Where |
 |-------|-----|-------|
-| Orange | `#F7941D` | "tilin", the mark's core |
+| Copper | `#CC7A3B` | "tilin", the mark's core (matches the site accent) |
 | Charcoal | `#414042` | "thecloud", the mark's bodies (light bg) |
-| Light orange | `#FFB96C` | secondary / app-tile gradient |
+| Bone | `#ECE7DB` | "thecloud" / bodies on dark backgrounds |
 | Ring gray | `#C9CDD2` | the orbit rings (light bg) |
+
+Unified on copper `#CC7A3B` across the site, the logo files, and social (ADR 0013). The original
+Fiverr wordmark was bright orange `#F7941D`, now superseded.
 
 ## Font
 
