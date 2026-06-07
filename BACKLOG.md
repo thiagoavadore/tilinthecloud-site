@@ -25,6 +25,9 @@ task board and indexes them.
 6. **Triage the inbox.** New bugs and feature requests arrive as GitHub Issues labeled `triage`
    (see [CONTRIBUTING.md](./CONTRIBUTING.md)). Before starting net-new work, convert open `triage`
    issues into `T##` tasks here (or decline with a one-line reason). Don't let reports sit in limbo.
+7. **Set a priority.** Every Todo task and triaged issue is **Now**, **Next**, or **Later** (issue
+   labels `priority: now` / `next` / `later`). Now = pick up next; Next = soon; Later = someday or v2.
+   Keep the Todo list grouped by these. `BACKLOG.md` is the prioritized plan; Issues are the inbox.
 
 ---
 
@@ -73,11 +76,20 @@ task board and indexes them.
 | -  | (none) | - | - |
 
 ### Todo / backlog
-- [ ] **T22** Confirm `writing.tilinthecloud.com` (Substack) resolves before launch. `(needs: user)`
-- [ ] **T23** Add real proof-strip numbers. No metrics invented yet (ADR 0008). `(needs: user)` publishable figures.
-- [ ] **T27** (v2, optional) Open Graph / social share image (currently text-only OG tags).
-- [ ] **T28** (v2, optional) Custom `404.html` in the Three-Body style.
-- [ ] **T29** (v2, optional) Privacy-light analytics decision (none wired yet).
+
+Grouped by priority (working-agreement rule 7). Triaged issues carry the matching `priority: *` label.
+
+**Now**
+- (nothing queued; the site is live and the rest is user-blocked or v2)
+
+**Next**
+- [ ] **T22** Confirm `writing.tilinthecloud.com` (Substack) resolves, then the "Read the writing" links go live. `(needs: user)`
+- [ ] **T23** Add real proof-strip numbers (ADR 0008). `(needs: user)` publishable figures.
+
+**Later**
+- [ ] **T27** Open Graph / social share image (currently text-only OG tags). (v2)
+- [ ] **T28** Custom `404.html` in the Three-Body style. (v2)
+- [ ] **T29** Privacy-light analytics decision (none wired yet). (v2)
 
 ---
 
