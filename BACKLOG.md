@@ -59,6 +59,8 @@ task board and indexes them.
 - [x] **T09** Stand up coordination: `BACKLOG.md` + MADR ADRs in `docs/decisions/` (ADR 0001).
 - [x] **T10** Set up issue-based intake: bug/feature issue forms, `CONTRIBUTING.md`, PR template,
   triage flow into the board (ADR 0011).
+- [x] **T30** Refine the hero three-body mark: brighter orbit rings + three equal bodies (bone with
+  copper rim) around the copper core. From #1, ADR 0012.
 - [x] **T24** Commit v1 to `main` and push to `origin` (commit `664da1d`).
 - [x] **T25** Configure GitHub Pages + DNS (GoDaddy): removed LinkedIn forwarding and the parked
   A record, added four apex A records to GitHub IPs, pointed `www` CNAME at `thiagoavadore.github.io`.
@@ -118,3 +120,4 @@ Durable decisions are ADRs in [docs/decisions/](./docs/decisions/). Current inde
 | [0009](./docs/decisions/0009-booking-via-google-calendar.md) | Booking via Google Calendar appointment scheduling | Accepted |
 | [0010](./docs/decisions/0010-host-on-github-pages-apex.md) | Host on GitHub Pages at the apex domain | Accepted |
 | [0011](./docs/decisions/0011-issue-based-intake-triage.md) | Issue-based intake, triaged into the backlog | Accepted |
+| [0012](./docs/decisions/0012-three-body-mark-treatment.md) | Three-body mark visual treatment | Accepted |
