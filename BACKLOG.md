@@ -99,3 +99,4 @@ Durable decisions are ADRs in [docs/decisions/](./docs/decisions/). Current inde
 | [0007](./docs/decisions/0007-use-frontend-design-plugin.md) | Use the official frontend-design plugin | Accepted |
 | [0008](./docs/decisions/0008-no-invented-outcome-metrics.md) | No invented outcome metrics on the proof strip | Accepted |
 | [0009](./docs/decisions/0009-booking-via-google-calendar.md) | Booking via Google Calendar appointment scheduling | Accepted |
+| [0010](./docs/decisions/0010-host-on-github-pages-apex.md) | Host on GitHub Pages at the apex domain | Accepted |

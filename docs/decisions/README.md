@@ -37,3 +37,4 @@ same session without touching the same file.
 | [0007](./0007-use-frontend-design-plugin.md) | Use the official frontend-design plugin | Accepted |
 | [0008](./0008-no-invented-outcome-metrics.md) | No invented outcome metrics on the proof strip | Accepted |
 | [0009](./0009-booking-via-google-calendar.md) | Booking via Google Calendar appointment scheduling | Accepted |
+| [0010](./0010-host-on-github-pages-apex.md) | Host on GitHub Pages at the apex domain | Accepted |
