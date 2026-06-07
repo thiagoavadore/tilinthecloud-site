@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 · Page not found · TilinTheCloud</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preload" href="/assets/fonts/clash-display-600.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <style>
+    /* 404-specific layout. Reuses the global tokens, fonts, buttons, header, and footer. */
+    .nf { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
+    .nf-main { display: grid; place-items: center; text-align: center; padding: clamp(2rem, 6vw, 4rem) var(--gut); }
+    .nf-inner { max-width: 640px; }
+    .nf-mark { width: clamp(180px, 34vw, 300px); aspect-ratio: 1; margin: 0 auto clamp(1.4rem, 4vw, 2.4rem); }
+    .nf-mark svg { width: 100%; height: 100%; overflow: visible; }
+    .nf-ring  { fill: none; stroke: #4E596B; stroke-width: 1.6; }
+    .nf-body  { fill: var(--bone); stroke: var(--copper); stroke-width: 1.6; filter: drop-shadow(0 0 6px rgba(204,122,59,.35)); }
+    .nf-core  { fill: var(--copper); filter: drop-shadow(0 0 20px rgba(204,122,59,.55)); }
+    .nf-lost  { fill: var(--bone); stroke: var(--copper); stroke-width: 1.6; opacity: .9; }
+    .nf-trail { fill: none; stroke: var(--copper); stroke-width: 1.4; stroke-dasharray: 2 8; stroke-linecap: round; opacity: .55; }
+    .nf-eyebrow { justify-content: center; margin-bottom: 1.1rem; }
+    .nf h1 { font-family: var(--display); font-weight: 600; font-size: clamp(2rem, 5.4vw, 3.3rem); line-height: 1.05; letter-spacing: -.025em; margin: 0 0 1rem; }
+    .nf h1 .accent { color: var(--copper); }
+    .nf p { color: var(--bone-dim); font-size: clamp(1.02rem, 1.6vw, 1.18rem); max-width: 44ch; margin: 0 auto clamp(1.6rem, 4vw, 2.2rem); }
+    .nf .cta-row { display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap; }
+    @media (prefers-reduced-motion: reduce) { .orbit-spin { animation: none !important; } }
+  </style>
+</head>
+<body class="nf">
+  <!-- ============ HEADER ============ -->
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="TilinTheCloud home">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <g fill="none" stroke="#3A4150" stroke-width="2">
+            <ellipse cx="32" cy="32" rx="20" ry="8"/>
+            <ellipse cx="32" cy="32" rx="20" ry="8" transform="rotate(60 32 32)"/>
+            <ellipse cx="32" cy="32" rx="20" ry="8" transform="rotate(120 32 32)"/>
+          </g>
+          <circle cx="52" cy="32" r="4.4" fill="#CC7A3B"/>
+          <circle cx="22" cy="49.3" r="4.4" fill="#E8E2D6"/>
+          <circle cx="22" cy="14.7" r="4.4" fill="#E8E2D6"/>
+        </svg>
+        <span><b>tilinthecloud</b></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-plain" href="/#what">What I do</a>
+        <a class="nav-plain" href="/#writing">Writing</a>
+        <a class="nav-cta" href="/#contact">Talk to me</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ 404 ============ -->
+  <main class="nf-main" aria-labelledby="nf-title">
+    <div class="nf-inner">
+      <!-- Broken three-body mark: two bodies still in orbit, one drifted out -->
+      <div class="nf-mark" aria-hidden="true">
+        <svg viewBox="0 0 400 400">
+          <g transform="rotate(0 200 200)"><g class="orbit-spin s1" style="transform-box:fill-box;transform-origin:center">
+            <ellipse class="nf-ring" cx="200" cy="200" rx="150" ry="56"/>
+            <circle class="nf-body" cx="350" cy="200" r="12"/>
+          </g></g>
+          <g transform="rotate(60 200 200)"><g class="orbit-spin s2" style="transform-box:fill-box;transform-origin:center">
+            <ellipse class="nf-ring" cx="200" cy="200" rx="150" ry="56"/>
+            <circle class="nf-body" cx="350" cy="200" r="12"/>
+          </g></g>
+          <!-- third orbit, its body has escaped -->
+          <g transform="rotate(120 200 200)"><g class="orbit-spin s3" style="transform-box:fill-box;transform-origin:center">
+            <ellipse class="nf-ring" cx="200" cy="200" rx="150" ry="56"/>
+          </g></g>
+          <!-- the lost body, drifted off course -->
+          <path class="nf-trail" d="M250 150 Q330 78 360 50"/>
+          <circle class="nf-lost" cx="366" cy="44" r="12"/>
+          <circle class="nf-core" cx="200" cy="200" r="16"/>
+        </svg>
+      </div>
+
+      <p class="eyebrow nf-eyebrow">Error 404</p>
+      <h1 id="nf-title">This page drifted <span class="accent">out of orbit.</span></h1>
+      <p>The link is broken, or the page moved. This is a one-page site, so whatever you came for is back at the start.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/">Back to home <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="/#contact">Talk to me</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-foot">
+    <div class="wrap">
+      <p class="legal"><b>TilinTheCloud BV</b> · Netherlands · © <span id="yr">2026</span></p>
+      <div class="foot-links">
+        <a href="/#what">What I do</a>
+        <a href="https://writing.tilinthecloud.com">Writing</a>
+        <a href="mailto:info@tilinthecloud.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var yr = document.getElementById("yr");
+    if (yr) yr.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
