@@ -40,3 +40,4 @@ same session without touching the same file.
 | [0010](./0010-host-on-github-pages-apex.md) | Host on GitHub Pages at the apex domain | Accepted |
 | [0011](./0011-issue-based-intake-triage.md) | Issue-based intake, triaged into the backlog | Accepted |
 | [0012](./0012-three-body-mark-treatment.md) | Three-body mark visual treatment | Accepted |
+| [0013](./0013-merged-logo-nexa-wordmark.md) | Merged logo (three-body mark + Nexa wordmark) | Accepted |
