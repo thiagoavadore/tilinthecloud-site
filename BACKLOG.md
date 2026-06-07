@@ -56,6 +56,7 @@ task board and indexes them.
   A record, added four apex A records to GitHub IPs, pointed `www` CNAME at `thiagoavadore.github.io`.
   MX/SPF/DKIM left untouched.
 - [x] **T26** Enforce HTTPS enabled; cert active on all edges (verified HTTP 200 + valid cert).
+- [x] **T20** Wire book-a-call button to the Google Calendar scheduling link (opens in new tab).
 
 ### In progress
 | ID | Task | Owner | Since |
@@ -63,7 +64,6 @@ task board and indexes them.
 | -  | (none) | - | - |
 
 ### Todo / backlog
-- [ ] **T20** Fill book-a-call scheduling link in `index.html` (search `REPLACE-WITH`). `(needs: user)` Cal.com / Calendly / SavvyCal URL.
 - [ ] **T21** Activate the contact form (FormSubmit, one confirmation click on first submission) or swap backend. `(needs: user)` See ADR 0006.
 - [ ] **T22** Confirm `writing.tilinthecloud.com` (Substack) resolves before launch. `(needs: user)`
 - [ ] **T23** Add real proof-strip numbers. No metrics invented yet (ADR 0008). `(needs: user)` publishable figures.
@@ -75,7 +75,6 @@ task board and indexes them.
 
 ## Open questions (waiting on Thiago)
 
-- Scheduling tool + URL for the book-a-call button? (T20)
 - Which outcome numbers are OK to publish, within the confidentiality rule (only GRESB, Nike,
   LINKIT, and "as a CTO" are nameable)? (T23)
 - Keep FormSubmit, or route the contact form through your own backend so leads never touch a
