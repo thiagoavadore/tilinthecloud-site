@@ -122,10 +122,9 @@ section { position: relative; }
   display: flex; align-items: center; justify-content: space-between;
   height: 68px;
 }
-.brand { display: inline-flex; align-items: center; gap: .65rem; font-family: var(--display); font-weight: 600; letter-spacing: -.01em; font-size: 1.06rem; }
-.brand svg { width: 26px; height: 26px; }
-.brand b { font-weight: 600; }
-.brand .tld { color: var(--bone-faint); font-weight: 500; }
+.brand { display: inline-flex; align-items: center; }
+.brand-logo { height: 30px; width: auto; display: block; }
+@media (max-width: 420px) { .brand-logo { height: 26px; } }
 .nav { display: flex; align-items: center; gap: clamp(1rem, 3vw, 2rem); }
 .nav a { font-weight: 500; font-size: .95rem; color: var(--bone-dim); transition: color .2s var(--ease); }
 .nav a:hover { color: var(--bone); }

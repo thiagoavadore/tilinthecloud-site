@@ -73,6 +73,8 @@ task board and indexes them.
   FormSubmit, see ADR 0006.
 - [x] **T28** Custom `404.html` in the Three-Body style (broken-orbit mark, one body drifted out;
   reuses the shared design system). Implementation, reuses ADR 0003, no new ADR.
+- [x] **T31** Merge logo: three-body mark + Nexa Bold wordmark (`tilinthecloud`). Brand assets in
+  `assets/brand/` (true orange); adopted in header + favicon recolored to site copper. ADR 0013.
 
 ### In progress
 | ID | Task | Owner | Since |
@@ -122,3 +124,4 @@ Durable decisions are ADRs in [docs/decisions/](./docs/decisions/). Current inde
 | [0010](./docs/decisions/0010-host-on-github-pages-apex.md) | Host on GitHub Pages at the apex domain | Accepted |
 | [0011](./docs/decisions/0011-issue-based-intake-triage.md) | Issue-based intake, triaged into the backlog | Accepted |
 | [0012](./docs/decisions/0012-three-body-mark-treatment.md) | Three-body mark visual treatment | Accepted |
+| [0013](./docs/decisions/0013-merged-logo-nexa-wordmark.md) | Merged logo (three-body mark + Nexa wordmark) | Accepted |
