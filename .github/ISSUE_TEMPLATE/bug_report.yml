@@ -1,0 +1,60 @@
+name: Bug report
+description: Something on the site is broken or wrong
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. This goes into triage and becomes a tracked task on the backlog.
+  - type: textarea
+    id: what
+    attributes:
+      label: What's wrong
+      description: What did you see, and what did you expect instead?
+      placeholder: The booking button does nothing on Safari on iOS...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where on the site
+      options:
+        - Hero
+        - What I do (three bodies)
+        - Proof strip
+        - Writing
+        - Contact form
+        - Book-a-call button
+        - Whole page / layout
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can someone see it happen?
+      placeholder: |
+        1. Open https://tilinthecloud.com on ...
+        2. Click ...
+        3. ...
+  - type: input
+    id: env
+    attributes:
+      label: Device and browser
+      placeholder: iPhone 15, Safari 17 / MacBook, Chrome 125
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Blocks launch or conversion
+        - Broken but has a workaround
+        - Cosmetic or minor
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or anything else

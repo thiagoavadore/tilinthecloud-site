@@ -2,7 +2,7 @@
 
 Source for **tilinthecloud.com**, the website for **TilinTheCloud BV** (Thiago de Faria's independent consulting practice, Netherlands).
 
-> **Coordination:** This repo is worked on by multiple agents. Before doing anything, read [BACKLOG.md](./BACKLOG.md) (the central task board) and follow its working agreement: claim tasks before starting, and record significant decisions as ADRs in [docs/decisions/](./docs/decisions/) (MADR format, one file per decision, append-only). This CLAUDE.md holds the hard rules; BACKLOG.md holds the live state; the ADRs hold the durable decisions.
+> **Coordination:** This repo is worked on by multiple agents. Before doing anything, read [BACKLOG.md](./BACKLOG.md) (the central task board) and follow its working agreement: claim tasks before starting, and record significant decisions as ADRs in [docs/decisions/](./docs/decisions/) (MADR format, one file per decision, append-only). New bugs and feature requests arrive as GitHub Issues labeled `triage`; triage them into the board per [CONTRIBUTING.md](./CONTRIBUTING.md). This CLAUDE.md holds the hard rules; BACKLOG.md holds the live state; the ADRs hold the durable decisions.
 
 ## What this is
 

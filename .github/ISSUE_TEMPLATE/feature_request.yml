@@ -1,0 +1,47 @@
+name: Feature request
+description: Suggest a change or addition to the site
+title: "[Feature]: "
+labels: ["feature", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        v1's job is narrow: legitimacy, state the offer, give a way to book. Ideas are welcome; triage decides v1 vs v2.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the gap or problem
+      description: What is missing or not working well for the visitor?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: who
+    attributes:
+      label: Who it helps and why it matters
+      description: Especially the senior buyer (CTO, VP of Engineering, Head of Architecture).
+  - type: dropdown
+    id: fit
+    attributes:
+      label: Does it fit v1's job (front door), or is it v2?
+      options:
+        - Fits v1 (legitimacy / offer / book)
+        - v2 or later
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: decision
+    attributes:
+      label: Might this change a recorded decision (need an ADR)?
+      options:
+        - "No"
+        - "Maybe"
+        - "Yes"
+    validations:
+      required: true
