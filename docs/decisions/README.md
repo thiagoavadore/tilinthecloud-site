@@ -42,3 +42,4 @@ same session without touching the same file.
 | [0012](./0012-three-body-mark-treatment.md) | Three-body mark visual treatment | Accepted |
 | [0013](./0013-merged-logo-nexa-wordmark.md) | Merged logo (three-body mark + Nexa wordmark) | Accepted |
 | [0014](./0014-social-share-asset-system.md) | Social / share asset system (OG card + LinkedIn assets) | Accepted |
+| [0015](./0015-keep-internal-material-out-of-public-repo.md) | Keep internal / sensitive material out of the public repo | Accepted |

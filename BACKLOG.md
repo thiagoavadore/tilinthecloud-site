@@ -40,8 +40,8 @@ task board and indexes them.
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
-- **Last updated:** 2026-06-07 by `claude` (T33: LinkedIn page copy drafts, company + personal, in
-  `assets/brand/social/`; needs user to finalize open questions and publish).
+- **Last updated:** 2026-06-07 by `claude` (T34: confidentiality hardening, purged names + internal
+  drafts from history, added public-repo guardrail, drafts now local-only. ADR 0015).
 
 ---
 
@@ -85,10 +85,16 @@ task board and indexes them.
 - [x] **T33** LinkedIn page *copy* (text companion to T32's visuals): drafts for the company page
   (tagline, overview, specialties, custom button, Dutch tagline + overview) and Thiago's personal
   profile (headline, About, top skills), synced to the brand/positioning and the voice +
-  confidentiality rules. In `assets/brand/social/linkedin-company-page-copy.md` and
-  `linkedin-personal-profile-copy.md`. `(needs: user)` to resolve the open questions in each file
-  (tagline persona vs thesis, Dutch register, specialties final pick, headline A/B/C, publish
-  timing) and paste into LinkedIn (manual, off-repo). No ADR yet; revisit once finalized.
+  confidentiality rules. Now kept **local only** in gitignored `drafts-local/` (moved off the public
+  repo, the personal draft holds pre-announcement detail). `(needs: user)` to resolve the open
+  questions in each file (tagline persona vs thesis, Dutch register, specialties final pick, headline
+  A/B/C, publish timing) and paste into LinkedIn (manual, off-repo). See ADR 0015.
+- [x] **T34** Confidentiality hardening: the whole repo is served publicly by GitHub Pages, so the
+  confidential names and internal drafts were purged from all git history (`git filter-repo` +
+  force-push), a public-repo guardrail was added to `CLAUDE.md` + the PR template, and private content
+  moved to gitignored homes (`drafts-local/`, `CLAUDE.local.md`). ADR 0015. `(needs: user)` other
+  clones must re-sync (re-clone) after the history rewrite; optionally ping GitHub Support to expire
+  cached refs.
 
 ### In progress
 | ID | Task | Owner | Since |
@@ -139,3 +145,4 @@ Durable decisions are ADRs in [docs/decisions/](./docs/decisions/). Current inde
 | [0012](./docs/decisions/0012-three-body-mark-treatment.md) | Three-body mark visual treatment | Accepted |
 | [0013](./docs/decisions/0013-merged-logo-nexa-wordmark.md) | Merged logo (three-body mark + Nexa wordmark) | Accepted |
 | [0014](./docs/decisions/0014-social-share-asset-system.md) | Social / share asset system (OG card + LinkedIn assets) | Accepted |
+| [0015](./docs/decisions/0015-keep-internal-material-out-of-public-repo.md) | Keep internal / sensitive material out of the public repo | Accepted |
