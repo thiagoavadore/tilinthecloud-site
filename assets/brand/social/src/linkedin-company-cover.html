@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<style>
+  html,body{ width:1128px; height:191px; }
+  body{
+    width:1128px; height:191px; overflow:hidden; position:relative;
+    background:
+      radial-gradient(140% 220% at 88% 0%, rgba(58,72,92,.34) 0%, transparent 55%),
+      radial-gradient(120% 200% at 2% 100%, rgba(204,122,59,.15) 0%, transparent 52%),
+      var(--ink);
+    color:var(--bone); font-family:"Switzer",sans-serif;
+  }
+  /* faint orbit watermark bleeding off the right edge */
+  .wm{ position:absolute; right:-70px; top:50%; transform:translateY(-50%); width:300px; height:300px; opacity:.10; }
+  .wm svg{ width:300px; height:300px; overflow:visible; }
+  .wm .ring{ stroke:#8a94a4; } .wm .body{ filter:none; } .wm .core{ filter:none; }
+  /* company logo overlaps bottom-left on LinkedIn; keep content from ~210px rightward */
+  .block{ position:absolute; left:212px; top:50%; transform:translateY(-50%); }
+  .eyebrow{ font-weight:500; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--copper-lo); margin-bottom:10px; }
+  .line{ font-family:"Clash Display",serif; font-weight:600; font-size:28px; line-height:1.12; letter-spacing:-.01em; }
+  .line .cop{ color:var(--copper); }
+  .url{ position:absolute; right:64px; top:50%; transform:translateY(-50%); display:flex; align-items:center; gap:11px;
+        font-family:"Clash Display",serif; font-weight:600; font-size:20px; color:var(--bone); }
+  .url .dot{ width:7px; height:7px; border-radius:50%; background:var(--copper); }
+</style></head>
+<body>
+  <div class="wm"><svg viewBox="0 0 400 400">
+    <g transform="rotate(0 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="15"/></g>
+    <g transform="rotate(60 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="15"/></g>
+    <g transform="rotate(120 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="15"/></g>
+    <circle class="core" cx="200" cy="200" r="22"/></svg></div>
+  <div class="block">
+    <div class="eyebrow">The Three-Body Program</div>
+    <div class="line">Modernization, teams, and GenAI,<br>run as <span class="cop">one program.</span></div>
+  </div>
+  <div class="url"><span class="dot"></span>tilinthecloud.com</div>
+</body></html>

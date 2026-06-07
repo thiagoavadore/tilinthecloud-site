@@ -41,3 +41,4 @@ same session without touching the same file.
 | [0011](./0011-issue-based-intake-triage.md) | Issue-based intake, triaged into the backlog | Accepted |
 | [0012](./0012-three-body-mark-treatment.md) | Three-body mark visual treatment | Accepted |
 | [0013](./0013-merged-logo-nexa-wordmark.md) | Merged logo (three-body mark + Nexa wordmark) | Accepted |
+| [0014](./0014-social-share-asset-system.md) | Social / share asset system (OG card + LinkedIn assets) | Accepted |

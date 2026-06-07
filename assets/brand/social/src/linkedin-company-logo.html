@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<style>
+  html,body{ width:600px; height:600px; }
+  body{
+    width:600px; height:600px; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+    background:
+      radial-gradient(80% 80% at 50% 42%, rgba(58,72,92,.30) 0%, transparent 60%),
+      radial-gradient(70% 70% at 50% 50%, rgba(204,122,59,.14) 0%, transparent 55%),
+      var(--ink);
+  }
+  svg{ width:380px; height:380px; overflow:visible; }
+  .body{ filter:drop-shadow(0 0 9px rgba(204,122,59,.5)); }
+  .core{ filter:drop-shadow(0 0 16px rgba(204,122,59,.7)); }
+</style></head>
+<body>
+  <svg viewBox="0 0 400 400">
+    <g transform="rotate(0 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="16"/></g>
+    <g transform="rotate(60 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="16"/></g>
+    <g transform="rotate(120 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="16"/></g>
+    <circle class="core" cx="200" cy="200" r="24"/>
+  </svg>
+</body></html>

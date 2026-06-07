@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<style>
+  html,body{ width:1584px; height:396px; }
+  body{
+    width:1584px; height:396px; overflow:hidden; position:relative;
+    background:
+      radial-gradient(120% 130% at 88% 10%, rgba(58,72,92,.32) 0%, transparent 52%),
+      radial-gradient(90% 120% at 6% 100%, rgba(204,122,59,.16) 0%, transparent 50%),
+      var(--ink);
+    color:var(--bone); font-family:"Switzer",sans-serif;
+  }
+  /* content sits right-of-center; bottom-left ~380px stays clear for the profile photo */
+  .block{ position:absolute; left:430px; right:300px; top:50%; transform:translateY(-50%); }
+  h1{ font-family:"Clash Display",serif; font-weight:600; font-size:52px; line-height:1.04; letter-spacing:-.01em; margin-bottom:22px; }
+  h1 .cop{ color:var(--copper); }
+  .triad{ display:flex; gap:14px; align-items:center; font-family:"Switzer"; font-weight:500; font-size:21px; color:var(--bone-dim); letter-spacing:.01em; }
+  .triad b{ color:var(--bone); font-weight:500; }
+  .triad .d{ width:7px; height:7px; border-radius:50%; background:var(--copper); display:inline-block; }
+  .cta{ position:absolute; right:80px; bottom:46px; display:flex; align-items:center; gap:13px;
+        background:rgba(204,122,59,.12); border:1.5px solid var(--copper); border-radius:999px;
+        padding:15px 26px; font-family:"Clash Display",serif; font-weight:600; font-size:23px; color:var(--copper-lo); }
+  .cta .arrow{ color:var(--copper); }
+  .mark{ position:absolute; right:96px; top:54px; width:104px; height:104px; }
+  .mark svg{ width:104px; height:104px; overflow:visible; }
+</style></head>
+<body>
+  <div class="mark"><svg viewBox="0 0 400 400">
+    <g transform="rotate(0 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="15"/></g>
+    <g transform="rotate(60 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="15"/></g>
+    <g transform="rotate(120 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="15"/></g>
+    <circle class="core" cx="200" cy="200" r="22"/></svg></div>
+  <div class="block">
+    <h1>Three bodies.<br><span class="cop">One program.</span></h1>
+    <div class="triad"><span class="d"></span><b>Architecture</b><span class="d"></span><b>Teams</b><span class="d"></span><b>AI capability</b><span style="color:#5E6671">, moving together</span></div>
+  </div>
+  <div class="cta"><span>Let's talk</span><span class="arrow">&#8594;</span><span>tilinthecloud.com</span></div>
+</body></html>

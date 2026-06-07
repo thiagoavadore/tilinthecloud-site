@@ -39,3 +39,29 @@ wordmark is shipped as outlines. To re-typeset, install Nexa Bold and re-run the
 
 The lockup is produced by rendering an HTML lockup in Nexa Bold, printing to PDF, and converting to
 SVG with `pdftocairo -svg` (which outlines the text). The mark is hand-authored SVG.
+
+## Social / share assets (`social/`)
+
+Raster cards for off-site surfaces, all on the dark brand treatment (ink ground, copper accent,
+the three-body mark on its dark variant: `#4E596B` rings, bone bodies, copper core). See ADR 0014.
+
+| File | Size | Use |
+|------|------|-----|
+| `social/og-cover.png` | 1200×630 | Open Graph / Twitter card. Wired in `index.html` + `404.html`. |
+| `social/linkedin-company-logo.png` | 400×400 | LinkedIn **company** logo (mark on ink, circle-crop safe). Replaces the pre-rebrand Fiverr cloud logo. |
+| `social/linkedin-company-cover.png` | 1128×191 | LinkedIn **company** cover. Left ~210px kept clear for the logo overlay. |
+| `social/linkedin-personal-avatar.png` | 800×800 | Thiago's **personal** profile photo, brand-framed (copper ring + mark badge). |
+| `social/linkedin-personal-header.png` | 1584×396 | Thiago's **personal** header. Bottom-left kept clear for the avatar. |
+
+These are not SVG because LinkedIn and OG scrapers only accept raster (PNG/JPG).
+
+**Regenerate:** sources are HTML in `social/src/` (relative paths, self-contained). Faithful webfont
+rendering needs headless Chrome, so the pipeline is Chrome `--screenshot` (not `rsvg-convert`, which
+can't load woff2). Run:
+
+```sh
+assets/brand/social/src/render.sh        # or: CHROME=/path/to/chrome assets/brand/social/src/render.sh
+```
+
+It renders each `src/*.html` at 2x and downsamples to the canonical size above. The avatar source
+reads `src/headshot.jpg` (Thiago's studio headshot); swap that file to re-cut the avatar.

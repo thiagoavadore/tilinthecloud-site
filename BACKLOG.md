@@ -40,7 +40,7 @@ task board and indexes them.
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
-- **Last updated:** 2026-06-07 by `claude` (v1 live: booking + form wired).
+- **Last updated:** 2026-06-07 by `claude` (social/share assets: OG card + LinkedIn set, ADR 0014).
 
 ---
 
@@ -75,6 +75,12 @@ task board and indexes them.
   reuses the shared design system). Implementation, reuses ADR 0003, no new ADR.
 - [x] **T31** Merge logo: three-body mark + Nexa Bold wordmark (`tilinthecloud`). Brand assets in
   `assets/brand/` (true orange); adopted in header + favicon recolored to site copper. ADR 0013.
+- [x] **T27** Open Graph / social share image: `assets/brand/social/og-cover.png` (1200×630), wired as
+  `og:image` + `twitter:image` in `index.html` + `404.html`. Part of the social-asset system, ADR 0014.
+- [x] **T32** LinkedIn brand assets (one render pipeline with T27): company logo (replaces the dead
+  pre-rebrand cloud logo) + company cover + Thiago's brand-framed personal avatar + personal header
+  ("Three bodies. One program." + CTA). PNGs in `assets/brand/social/`, regenerable from `social/src/`.
+  ADR 0014. `(needs: user)` to upload the four LinkedIn images to LinkedIn (manual, off-repo).
 
 ### In progress
 | ID | Task | Owner | Since |
@@ -93,7 +99,6 @@ Grouped by priority (working-agreement rule 7). Triaged issues carry the matchin
 - [ ] **T23** Add real proof-strip numbers (ADR 0008). `(needs: user)` publishable figures.
 
 **Later**
-- [ ] **T27** Open Graph / social share image (currently text-only OG tags). (v2)
 - [ ] **T29** Privacy-light analytics decision (none wired yet). (v2)
 
 ---
@@ -125,3 +130,4 @@ Durable decisions are ADRs in [docs/decisions/](./docs/decisions/). Current inde
 | [0011](./docs/decisions/0011-issue-based-intake-triage.md) | Issue-based intake, triaged into the backlog | Accepted |
 | [0012](./docs/decisions/0012-three-body-mark-treatment.md) | Three-body mark visual treatment | Accepted |
 | [0013](./docs/decisions/0013-merged-logo-nexa-wordmark.md) | Merged logo (three-body mark + Nexa wordmark) | Accepted |
+| [0014](./docs/decisions/0014-social-share-asset-system.md) | Social / share asset system (OG card + LinkedIn assets) | Accepted |

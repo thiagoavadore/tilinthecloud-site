@@ -9,3 +9,6 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+
+# Scratch render mockups (finals live in assets/brand/social/)
+build/
