@@ -34,7 +34,7 @@ task board and indexes them.
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
-- **Last updated:** 2026-06-06 by `claude` (initial build session).
+- **Last updated:** 2026-06-07 by `claude` (v1 live: booking + form wired).
 
 ---
 
@@ -57,6 +57,10 @@ task board and indexes them.
   MX/SPF/DKIM left untouched.
 - [x] **T26** Enforce HTTPS enabled; cert active on all edges (verified HTTP 200 + valid cert).
 - [x] **T20** Wire book-a-call button to the Google Calendar scheduling link (opens in new tab).
+  Hero "Talk to me" intentionally scrolls to #contact (booking + email + form together); only the
+  explicit "Book a call" line goes to Calendar.
+- [x] **T21** Contact form activated (FormSubmit confirmed; submissions now forward to info@). Kept
+  FormSubmit, see ADR 0006.
 
 ### In progress
 | ID | Task | Owner | Since |
@@ -64,7 +68,6 @@ task board and indexes them.
 | -  | (none) | - | - |
 
 ### Todo / backlog
-- [ ] **T21** Activate the contact form (FormSubmit, one confirmation click on first submission) or swap backend. `(needs: user)` See ADR 0006.
 - [ ] **T22** Confirm `writing.tilinthecloud.com` (Substack) resolves before launch. `(needs: user)`
 - [ ] **T23** Add real proof-strip numbers. No metrics invented yet (ADR 0008). `(needs: user)` publishable figures.
 - [ ] **T27** (v2, optional) Open Graph / social share image (currently text-only OG tags).
@@ -77,8 +80,6 @@ task board and indexes them.
 
 - Which outcome numbers are OK to publish, within the confidentiality rule (only GRESB, Nike,
   LINKIT, and "as a CTO" are nameable)? (T23)
-- Keep FormSubmit, or route the contact form through your own backend so leads never touch a
-  third party? (T21)
 - When does the Substack subdomain go live? (T22)
 
 ---
