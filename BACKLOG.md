@@ -58,7 +58,7 @@ task board and indexes them.
 - [x] **T26** Enforce HTTPS enabled; cert active on all edges (verified HTTP 200 + valid cert).
 - [x] **T20** Wire book-a-call button to the Google Calendar scheduling link (opens in new tab).
   Hero "Talk to me" intentionally scrolls to #contact (booking + email + form together); only the
-  explicit "Book a call" line goes to Calendar.
+  explicit "Book a call" line goes to Calendar. (ADR 0009.)
 - [x] **T21** Contact form activated (FormSubmit confirmed; submissions now forward to info@). Kept
   FormSubmit, see ADR 0006.
 
@@ -98,3 +98,4 @@ Durable decisions are ADRs in [docs/decisions/](./docs/decisions/). Current inde
 | [0006](./docs/decisions/0006-contact-form-formsubmit.md) | Contact form via FormSubmit, no backend | Accepted |
 | [0007](./docs/decisions/0007-use-frontend-design-plugin.md) | Use the official frontend-design plugin | Accepted |
 | [0008](./docs/decisions/0008-no-invented-outcome-metrics.md) | No invented outcome metrics on the proof strip | Accepted |
+| [0009](./docs/decisions/0009-booking-via-google-calendar.md) | Booking via Google Calendar appointment scheduling | Accepted |
