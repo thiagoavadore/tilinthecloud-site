@@ -58,3 +58,16 @@ copper core, Clash Display + Switzer):
   rendered avatar already carries the same likeness).
 - **Follow-ups:** the LinkedIn assets must be uploaded by Thiago (manual, off-repo). The site OG tags
   ship with the site.
+
+## Refinements (post-ship, same day)
+
+Adjustments after seeing the assets on LinkedIn, all in the sources under `social/src/`:
+
+- **Company cover:** the logo overlaps further than assumed (right edge ~216px, rising to mid-height),
+  so content now starts at **360px**, not 210px, leaving the left third clear.
+- **Small-size legibility:** the `#4E596B` orbit rings vanished when downscaled to avatar/tab size, so
+  the **company logo, favicon, and avatar badge** use brighter `#8E99AD` rings (thicker stroke, larger
+  core/bodies, and the logo mark scaled to ~86% fill). The large cards (OG, header, cover) keep
+  `#4E596B`. Documented in `assets/brand/README.md`. **Do not** revert these to `#4E596B`.
+- **Personal header:** dropped the trailing ", moving together" (a flex gap left it as a dangling
+  comma); the triad stands alone.

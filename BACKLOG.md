@@ -40,7 +40,8 @@ task board and indexes them.
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
-- **Last updated:** 2026-06-07 by `claude` (social/share assets: OG card + LinkedIn set, ADR 0014).
+- **Last updated:** 2026-06-07 by `claude` (social/share assets shipped: OG card live on-site; LinkedIn
+  set + favicon refined for small-size legibility and logo overlap. ADR 0014 + its Refinements note).
 
 ---
 

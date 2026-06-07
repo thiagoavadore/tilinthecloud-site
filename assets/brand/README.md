@@ -26,6 +26,8 @@ PNGs are transparent. Regenerate from the SVGs with `rsvg-convert -w <width> in.
 | Charcoal | `#414042` | "thecloud", the mark's bodies (light bg) |
 | Bone | `#ECE7DB` | "thecloud" / bodies on dark backgrounds |
 | Ring gray | `#C9CDD2` | the orbit rings (light bg) |
+| Ring (dark) | `#4E596B` | orbit rings on the dark ground, large surfaces (hero, OG card, header, cover) |
+| Ring (dark, small) | `#8E99AD` | brighter orbit rings on **small-size** dark assets (favicon, company logo, avatar badge) so they survive downscaling |
 
 Unified on copper `#CC7A3B` across the site, the logo files, and social (ADR 0013). The original
 Fiverr wordmark was bright orange `#F7941D`, now superseded.
@@ -43,13 +45,15 @@ SVG with `pdftocairo -svg` (which outlines the text). The mark is hand-authored 
 ## Social / share assets (`social/`)
 
 Raster cards for off-site surfaces, all on the dark brand treatment (ink ground, copper accent,
-the three-body mark on its dark variant: `#4E596B` rings, bone bodies, copper core). See ADR 0014.
+the three-body mark on its dark variant: bone bodies, copper core, and orbit rings at `#4E596B`
+on the large cards but a brighter `#8E99AD` on the small-size assets (favicon, company logo, avatar
+badge) so the orbits stay legible when downscaled. See ADR 0014.
 
 | File | Size | Use |
 |------|------|-----|
 | `social/og-cover.png` | 1200×630 | Open Graph / Twitter card. Wired in `index.html` + `404.html`. |
 | `social/linkedin-company-logo.png` | 400×400 | LinkedIn **company** logo (mark on ink, circle-crop safe). Replaces the pre-rebrand Fiverr cloud logo. |
-| `social/linkedin-company-cover.png` | 1128×191 | LinkedIn **company** cover. Left ~210px kept clear for the logo overlay. |
+| `social/linkedin-company-cover.png` | 1128×191 | LinkedIn **company** cover. Left third (~360px) kept clear: the logo overlays bottom-left and rises to mid-height. |
 | `social/linkedin-personal-avatar.png` | 800×800 | Thiago's **personal** profile photo, brand-framed (copper ring + mark badge). |
 | `social/linkedin-personal-header.png` | 1584×396 | Thiago's **personal** header. Bottom-left kept clear for the avatar. |
 
