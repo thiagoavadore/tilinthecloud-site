@@ -79,6 +79,8 @@ Thiago runs **modernization, team redesign, and GenAI adoption as ONE program**.
 - **DNS** (configured at the registrar, not in this repo):
   - Four `A` records for the apex → GitHub Pages IPs: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
   - One `www` `CNAME` → the GitHub Pages host.
+  - One `writing` `CNAME` → Substack (`target.substack-custom-domains.com`) for the newsletter ("The Recovering CTO"). See ADR 0016.
+- **The apex stays on GitHub Pages. NEVER point `tilinthecloud.com` at Substack, and never enable Substack's "root domain redirect" (it would hijack the front-page site, the exact failure this project undoes).**
 - **Email MX is independent. DO NOT TOUCH email DNS.**
 
 ## Out of scope for v1

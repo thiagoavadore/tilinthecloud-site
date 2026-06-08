@@ -109,7 +109,7 @@ Grouped by priority (working-agreement rule 7). Triaged issues carry the matchin
 - (nothing queued; the site is live and the rest is user-blocked or v2)
 
 **Next**
-- [ ] **T22** Confirm `writing.tilinthecloud.com` (Substack) resolves, then the "Read the writing" links go live. `(needs: user)`
+- [ ] **T22** `writing.tilinthecloud.com` (Substack "The Recovering CTO"): publication built + configured, registrar CNAME + SSL verified (2026-06-08). **Waiting on Substack's DNS-config bind** (up to 36h, email pending); until it serves the publication the host 302s to substack.com. When live, the site's "Read the writing" links work automatically (already hardcoded). See ADR 0016. `(waiting: Substack backend)`
 - [ ] **T23** Add real proof-strip numbers (ADR 0008). `(needs: user)` publishable figures.
 
 **Later**
@@ -121,7 +121,6 @@ Grouped by priority (working-agreement rule 7). Triaged issues carry the matchin
 
 - Which outcome numbers are OK to publish, within the confidentiality rule (only GRESB, Nike,
   LINKIT, and "as a CTO" are nameable)? (T23)
-- When does the Substack subdomain go live? (T22)
 
 ---
 

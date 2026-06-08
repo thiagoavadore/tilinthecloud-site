@@ -38,6 +38,7 @@ python3 -m http.server 8000
 3. **DNS at the registrar** (not in this repo):
    - Four `A` records for the apex → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - One `CNAME` for `www` → `<your-github-username>.github.io`
+   - One `CNAME` for `writing` → `target.substack-custom-domains.com` (Substack newsletter; apex stays on GitHub Pages, never enable Substack's root-domain redirect). See ADR 0016.
 4. Enable **Enforce HTTPS** once the cert provisions.
 
 > Email MX records are independent. Do not touch them.

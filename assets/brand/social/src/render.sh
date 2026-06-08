@@ -22,6 +22,7 @@ render() { # html  win_w  win_h  out_name  final_w
 
 echo "Rendering social assets -> $OUT"
 render og.html                       1200 630  og-cover.png                 1200
+render substack-cover.html           1200 800  substack-cover.png           1200
 render linkedin-company-logo.html     600 600  linkedin-company-logo.png     400
 render linkedin-company-cover.html   1128 191  linkedin-company-cover.png   1128
 render linkedin-personal-header.html 1584 396  linkedin-personal-header.png 1584
