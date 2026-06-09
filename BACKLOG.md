@@ -40,7 +40,7 @@ task board and indexes them.
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
-- **Last updated:** 2026-06-09 by `claude` (T36: contact section reframed call-first, duplicate email cut). Prior: (T35: copy pass + proof strip expanded to thirteen named
+- **Last updated:** 2026-06-09 by `claude` (T36 + PR #6: contact reframed call-first, duplicate email cut, book-a-call icon cache-proofed). Prior: (T35: copy pass + proof strip expanded to thirteen named
   engagements under "Where I've done the work", tagline softened. ADR 0017).
 
 ---
@@ -112,6 +112,11 @@ task board and indexes them.
   context as the form, so it's a better-outcome path, not a faster form), demoted the form's Send to
   ghost, and removed the duplicate email line (email kept only as the quiet note under Send). Touches
   `index.html` + `assets/css/style.css` only. No ADR (styling/copy refinement, no positioning/DNS change).
+  Follow-up (PR #6): the icon's size lived only in CSS, so browsers on a stale cached `style.css`
+  rendered the SVG at its ~300x150 default and inflated the button into a copper blob. Fixed by sizing
+  the icon via HTML attributes (`width`/`height` + `stroke="currentColor"`) so it survives a stale
+  stylesheet. Rule of thumb for this no-build Pages site: give inline icon SVGs explicit dimensions in
+  the markup, not CSS-only (HTML and CSS cache independently).
 
 ### In progress
 | ID | Task | Owner | Since |
