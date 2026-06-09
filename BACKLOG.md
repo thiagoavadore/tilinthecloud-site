@@ -95,6 +95,11 @@ task board and indexes them.
   moved to gitignored homes (`drafts-local/`, `CLAUDE.local.md`). ADR 0015. `(needs: user)` other
   clones must re-sync (re-clone) after the history rewrite; optionally ping GitHub Support to expire
   cached refs.
+- [x] **T22** `writing.tilinthecloud.com` (Substack "The Recovering CTO") is **live**: registrar CNAME +
+  SSL + Substack's domain bind all verified 2026-06-09 (serves the publication, HTTP 200, no 302 to
+  substack.com). The site's "Read the writing" links resolve end-to-end. Publication fully configured
+  (theme, logo, bio, About, pinned welcome post, welcome email, homepage loop back to the site).
+  Substack copy kept local in gitignored `drafts-local/substack-profile-copy.md`. See ADR 0016.
 
 ### In progress
 | ID | Task | Owner | Since |
@@ -109,7 +114,6 @@ Grouped by priority (working-agreement rule 7). Triaged issues carry the matchin
 - (nothing queued; the site is live and the rest is user-blocked or v2)
 
 **Next**
-- [ ] **T22** `writing.tilinthecloud.com` (Substack "The Recovering CTO"): publication built + configured, registrar CNAME + SSL verified (2026-06-08). **Waiting on Substack's DNS-config bind** (up to 36h, email pending); until it serves the publication the host 302s to substack.com. When live, the site's "Read the writing" links work automatically (already hardcoded). See ADR 0016. `(waiting: Substack backend)`
 - [ ] **T23** Add real proof-strip numbers (ADR 0008). `(needs: user)` publishable figures.
 
 **Later**
