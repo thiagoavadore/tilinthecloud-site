@@ -34,6 +34,11 @@ Thiago runs **modernization, team redesign, and GenAI adoption as ONE program**.
 
 ## Voice constraints (HARD RULES)
 
+> These hard rules **mirror** the canonical brand-voice source, which lives in Thiago's private vault
+> (`TilinTheCloud/VOICE.md`) and governs. This public block is a deliberately small, stable subset
+> (also published on the live site) so the repo and cloud-review agents stay self-contained. The
+> fuller voice/audience/confidentiality guidance is in the vault. See ADR 0018.
+
 - Voice: **direct, warm-professional.**
 - **NO em dashes anywhere.** Use commas, parentheses, colons, or "but"/"and".
 - **No corporate jargon**: never "leverage", "synergy", "align on", "double-click".
@@ -48,7 +53,8 @@ Thiago runs **modernization, team redesign, and GenAI adoption as ONE program**.
   drafts and private notes local and gitignored (`drafts-local/`, `CLAUDE.local.md`).
 - **Never name the two confidential former employers** on the site, in copy, comments, commit
   messages, or alt text. Their names are deliberately kept out of this public repo; they live in the
-  gitignored `CLAUDE.local.md` for local enforcement.
+  private vault (`TilinTheCloud/VOICE.md`) and are pulled into local sessions via the gitignored
+  `CLAUDE.local.md` for enforcement, never stored in this repo. See ADR 0018.
 - Quotable proof that IS allowed on the strip: **AWS, Nike, ASML, KLM, Rabobank, KBC, FC Utrecht, GRESB,
   LINKIT, Ticketscript, Icemobile, CHDR, INEP** (a mix of direct employment, consulting, and advisory
   work). The strip is headed **"Where I've done the work"**, a deliberately honest umbrella that claims
