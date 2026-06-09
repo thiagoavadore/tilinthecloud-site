@@ -232,6 +232,7 @@ section { position: relative; }
 .proof-row { display: flex; flex-wrap: wrap; align-items: center; gap: clamp(1rem, 3vw, 2rem); }
 .proof-item { font-family: var(--display); font-weight: 600; font-size: clamp(1.15rem, 2.2vw, 1.6rem); letter-spacing: -.01em; color: var(--bone); }
 .proof-sep { color: var(--bone-faint); font-size: 1.2rem; }
+.proof-more { color: var(--bone-faint); font-size: .92rem; font-style: italic; align-self: center; }
 .proof-note { margin-top: 1.4rem; color: var(--bone-faint); font-size: .92rem; }
 
 /* ---------- Writing ---------- */

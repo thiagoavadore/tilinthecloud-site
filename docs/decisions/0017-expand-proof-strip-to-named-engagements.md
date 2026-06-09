@@ -50,6 +50,21 @@ for the outcome"** (hero meta tags + the What-I-do foot), which keeps the accoun
 edge without promising a number the page does not display. CLAUDE.md's allowed-proof rule and the
 landing-copy spec block were updated to match.
 
+## Amendment (2026-06-09)
+
+Three refinements after seeing the strip on the live page:
+
+1. **Added two Dutch banks**, ABN AMRO and de Volksbank, placed next to Rabobank and KBC so the row
+   reads as a deliberate finance/banking cluster. Both supplied by Thiago; neither is a confidential
+   former employer, so the rule above is untouched.
+2. **Added a muted, italic "and more" at the end of the row** so the list reads as representative
+   rather than exhaustive (removes the "is that all?" read and the pressure to be complete).
+3. **Moved the proof strip below "What I do"** (it now sits between the Three-Body Program section and
+   Writing). Rationale: a cold buyer should meet the claim and the method first, then the evidence for
+   it. Logos landing after the explanation hit harder because the reader knows what they are proof of.
+   The hero's eyebrow and thesis already carry the first legitimacy beat. Easily reversible if the
+   immediate-logo-wall placement tests better.
+
 ## Consequences
 
 - **Good:** a markedly stronger, recognizable credibility strip; the umbrella label is honest across
