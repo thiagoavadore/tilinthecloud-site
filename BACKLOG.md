@@ -86,9 +86,8 @@ task board and indexes them.
   (tagline, overview, specialties, custom button, Dutch tagline + overview) and Thiago's personal
   profile (headline, About, top skills), synced to the brand/positioning and the voice +
   confidentiality rules. Now kept **local only** in gitignored `drafts-local/` (moved off the public
-  repo, the personal draft holds pre-announcement detail). `(needs: user)` to resolve the open
-  questions in each file (tagline persona vs thesis, Dutch register, specialties final pick, headline
-  A/B/C, publish timing) and paste into LinkedIn (manual, off-repo). See ADR 0015.
+  repo, the personal draft holds pre-announcement detail). Open questions resolved and both pages
+  published manually on 2026-06-09 (drafts updated to match). See ADR 0015.
 - [x] **T34** Confidentiality hardening: the whole repo is served publicly by GitHub Pages, so the
   confidential names and internal drafts were purged from all git history (`git filter-repo` +
   force-push), a public-repo guardrail was added to `CLAUDE.md` + the PR template, and private content
