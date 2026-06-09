@@ -49,13 +49,17 @@ Thiago runs **modernization, team redesign, and GenAI adoption as ONE program**.
 - **Never name the two confidential former employers** on the site, in copy, comments, commit
   messages, or alt text. Their names are deliberately kept out of this public repo; they live in the
   gitignored `CLAUDE.local.md` for local enforcement.
-- Quotable proof that IS allowed: **GRESB, Nike, LINKIT, and "as a CTO".** Use only these for the proof strip.
+- Quotable proof that IS allowed on the strip: **AWS, Nike, ASML, KLM, Rabobank, KBC, FC Utrecht, GRESB,
+  LINKIT, Ticketscript, Icemobile, CHDR, INEP** (a mix of direct employment, consulting, and advisory
+  work). The strip is headed **"Where I've done the work"**, a deliberately honest umbrella that claims
+  no internal-employee status for any single name. **This list does NOT relax the rule above: still
+  never name the two confidential former employers.** See ADR 0017.
 
 ## v1 sections
 
 1. **Hero**: the thesis + one-line positioning + two buttons (Talk to me / Read the writing).
-2. **What I do**: the three-bodies framing, who it is for, the "hands-on, with a number" promise.
-3. **Proof strip**: anonymized outcomes (GRESB, Nike, the CTO seat).
+2. **What I do**: the three-bodies framing, who it is for, the "hands-on, on the hook for the outcome" promise.
+3. **Proof strip**: named past engagements under "Where I've done the work" (employment + consulting + advisory; see the allowed list above and ADR 0017).
 4. **Writing**: link out to Substack ("The Recovering CTO", at `writing.tilinthecloud.com` once live).
 5. **Contact**: a book-a-call link + `info@tilinthecloud.com` (wire the contact form to that address).
 
@@ -66,9 +70,9 @@ Thiago runs **modernization, team redesign, and GenAI adoption as ONE program**.
 >
 > [Talk to me] · [Read the writing]
 >
-> Most enterprises modernize the architecture, reorganize the teams, and adopt GenAI as three separate programs. The gaps between them are where the program stalls. I close those gaps: one operator, three bodies (architecture, teams, AI capability), moving together. Hands-on, and with a number on the outcome.
+> Most enterprises modernize the architecture, reorganize the teams, and adopt GenAI as three separate programs. The gaps between them are where the program stalls. I close those gaps: one operator, three bodies (architecture, teams, AI capability), moving together. Hands-on, and on the hook for the outcome.
 >
-> Twenty years from statistician to CTO to hands-on architect. I have run these from the inside at GRESB, Nike, and as a CTO.
+> Twenty years from statistician to CTO to hands-on architect. Where I've done the work: AWS, Nike, ASML, KLM, Rabobank, KBC, FC Utrecht, GRESB, LINKIT, Ticketscript, Icemobile, CHDR, INEP.
 >
 > If your architecture is six months ahead of your teams, and your GenAI strategy is a deck instead of a system, that is the gap I close. Let's talk: info@tilinthecloud.com
 

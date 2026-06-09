@@ -40,8 +40,8 @@ task board and indexes them.
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
-- **Last updated:** 2026-06-07 by `claude` (T34: confidentiality hardening, purged names + internal
-  drafts from history, added public-repo guardrail, drafts now local-only. ADR 0015).
+- **Last updated:** 2026-06-09 by `claude` (T35: copy pass + proof strip expanded to thirteen named
+  engagements under "Where I've done the work", tagline softened. ADR 0017).
 
 ---
 
@@ -100,6 +100,12 @@ task board and indexes them.
   substack.com). The site's "Read the writing" links resolve end-to-end. Publication fully configured
   (theme, logo, bio, About, pinned welcome post, welcome email, homepage loop back to the site).
   Substack copy kept local in gitignored `drafts-local/substack-profile-copy.md`. See ADR 0016.
+- [x] **T35** Copy pass on `index.html`: ran the humanizer + voice rules over the live copy (softened
+  the unbacked "with a number on the outcome" tagline to "on the hook for the outcome", removed one
+  "X, not Y" negation + a duplicate "deck", de-duped the contact "out of step" lines). Expanded the
+  proof strip from four names to thirteen named past engagements (employment + consulting + advisory),
+  recognizable-brand-first, under the honest umbrella "Where I've done the work"; dropped "as a CTO" as
+  a row item. Updated `CLAUDE.md` (allowed-proof rule + landing-copy spec) to match. See ADR 0017.
 
 ### In progress
 | ID | Task | Owner | Since |
@@ -123,8 +129,9 @@ Grouped by priority (working-agreement rule 7). Triaged issues carry the matchin
 
 ## Open questions (waiting on Thiago)
 
-- Which outcome numbers are OK to publish, within the confidentiality rule (only GRESB, Nike,
-  LINKIT, and "as a CTO" are nameable)? (T23)
+- Which outcome numbers are OK to publish, within the confidentiality rule (the nameable
+  engagements are now the thirteen in the proof strip, ADR 0017; the two confidential former
+  employers stay off-limits)? (T23)
 
 ---
 
@@ -149,3 +156,5 @@ Durable decisions are ADRs in [docs/decisions/](./docs/decisions/). Current inde
 | [0013](./docs/decisions/0013-merged-logo-nexa-wordmark.md) | Merged logo (three-body mark + Nexa wordmark) | Accepted |
 | [0014](./docs/decisions/0014-social-share-asset-system.md) | Social / share asset system (OG card + LinkedIn assets) | Accepted |
 | [0015](./docs/decisions/0015-keep-internal-material-out-of-public-repo.md) | Keep internal / sensitive material out of the public repo | Accepted |
+| [0016](./docs/decisions/0016-newsletter-writing-subdomain-substack.md) | Newsletter on `writing.` subdomain via Substack custom domain | Accepted |
+| [0017](./docs/decisions/0017-expand-proof-strip-to-named-engagements.md) | Expand the proof strip to named past engagements | Accepted |

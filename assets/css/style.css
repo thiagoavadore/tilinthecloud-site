@@ -227,9 +227,10 @@ section { position: relative; }
 /* ---------- Proof strip ---------- */
 .proof { border-top: 1px solid var(--ink-line); border-bottom: 1px solid var(--ink-line); background: var(--ink-raised); }
 .proof .wrap { padding-block: clamp(2.2rem, 4vw, 3rem); }
-.proof .proof-lead { color: var(--bone-dim); font-size: 1.02rem; margin-bottom: 1.6rem; max-width: 60ch; }
-.proof-row { display: flex; flex-wrap: wrap; align-items: center; gap: clamp(1.2rem, 4vw, 2.8rem); }
-.proof-item { font-family: var(--display); font-weight: 600; font-size: clamp(1.3rem, 2.6vw, 1.9rem); letter-spacing: -.01em; color: var(--bone); }
+.proof .proof-lead { color: var(--bone-dim); font-size: 1.02rem; margin-bottom: 1rem; max-width: 60ch; }
+.proof .proof-where { margin-bottom: 1.2rem; }
+.proof-row { display: flex; flex-wrap: wrap; align-items: center; gap: clamp(1rem, 3vw, 2rem); }
+.proof-item { font-family: var(--display); font-weight: 600; font-size: clamp(1.15rem, 2.2vw, 1.6rem); letter-spacing: -.01em; color: var(--bone); }
 .proof-sep { color: var(--bone-faint); font-size: 1.2rem; }
 .proof-note { margin-top: 1.4rem; color: var(--bone-faint); font-size: .92rem; }
 
