@@ -40,7 +40,7 @@ task board and indexes them.
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
-- **Last updated:** 2026-06-09 by `claude` (T37: brand-voice single source of truth moved to the private vault, ADR 0018; T36 + PR #6: contact reframed call-first, duplicate email cut, book-a-call icon cache-proofed). Prior: (T35: copy pass + proof strip expanded to thirteen named
+- **Last updated:** 2026-06-09 by `claude` (T23 deferred; T29 split into T38 website-GA4 + T39 Substack-GA4 with setup instructions). Prior: (T37: brand-voice single source of truth moved to the private vault, ADR 0018; T36 + PR #6: contact reframed call-first, duplicate email cut, book-a-call icon cache-proofed). Prior: (T35: copy pass + proof strip expanded to thirteen named
   engagements under "Where I've done the work", tagline softened. ADR 0017).
 
 ---
@@ -141,10 +141,51 @@ Grouped by priority (working-agreement rule 7). Triaged issues carry the matchin
 - (nothing queued; the site is live and the rest is user-blocked or v2)
 
 **Next**
-- [ ] **T23** Add real proof-strip numbers (ADR 0008). `(needs: user)` publishable figures.
+- [ ] **T38** Google Analytics (GA4) on the **website** (`index.html` + `404.html`, static on GitHub
+  Pages). Splits the site half out of the old T29. `(needs: user for the GA4 property)`
+  - **Set up the property (user):** at analytics.google.com → Admin → Create property → add a **Web
+    data stream** for `https://tilinthecloud.com` → copy the **Measurement ID** (`G-XXXXXXXXXX`).
+  - **Implement (agent):** paste the gtag.js snippet immediately before `</head>` in **both**
+    `index.html` and `404.html` (no build step, so it's a literal paste). The Measurement ID is a
+    public client-side value, fine to commit (it is not a secret):
+    ```html
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    ```
+  - **Decide first (record as a short ADR):** GA pulls third-party JS from `googletagmanager.com`,
+    which cuts against CLAUDE.md's "no external runtime deps / CDNs where avoidable" and the v1
+    "privacy-light" stance, and the buyers + Thiago are EU, so GA's cookies / data-to-Google generally
+    need a **consent banner (GDPR / ePrivacy)** and a privacy line before `gtag` loads (Consent Mode
+    v2). Alternative: a cookieless privacy-light tool (Plausible / GoatCounter / Cloudflare Web
+    Analytics) needs no banner. The ADR supersedes the "privacy-light pageview counter" note in
+    CLAUDE.md "Out of scope for v1".
+  - **Verify:** on the live site, GA4 **Realtime** shows your own visit; the network tab loads
+    `gtag.js`.
+- [ ] **T39** Google Analytics (GA4) on the **Substack** ("The Recovering CTO",
+  `writing.tilinthecloud.com`). Splits the newsletter half out of the old T29. No code, Substack
+  injects the tag natively. `(needs: user — Substack admin)`
+  - **Set up (user):** Substack **Dashboard → Settings → Analytics** (the "Advertising analytics"
+    area) → paste the GA4 **Measurement ID** (`G-XXXXXXXXXX`) into "Google Analytics Measurement ID"
+    → Save. Substack handles GA4 natively and reports page views, sign-ups, and paid subscriptions
+    (allow ~24h to populate).
+  - **Property choice:** add a **separate Web data stream** for `writing.tilinthecloud.com` under the
+    **same GA4 property** as the site (recommended: one property, two streams, so site + newsletter
+    roll up but can be filtered apart).
+  - **Note:** Substack's own analytics (opens, subscriber growth) stay the primary metric; GA adds web
+    pageview data and a unified view with the site. Same EU/GDPR consideration as T38 applies to the
+    public reading experience; Substack controls its own cookie/consent handling, verify what it
+    surfaces.
+  - **Verify:** GA4 Realtime shows a visit to a `writing.tilinthecloud.com` post.
 
 **Later**
-- [ ] **T29** Privacy-light analytics decision (none wired yet). (v2)
+- [ ] **T23** Add real proof-strip numbers (ADR 0008). `(needs: user)` publishable figures.
+  **(Deferred 2026-06-09 — not planned; revisit only if a concrete need comes up.)**
 
 ---
 
