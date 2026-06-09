@@ -40,7 +40,7 @@ task board and indexes them.
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
-- **Last updated:** 2026-06-09 by `claude` (T35: copy pass + proof strip expanded to thirteen named
+- **Last updated:** 2026-06-09 by `claude` (T36: contact section reframed call-first, duplicate email cut). Prior: (T35: copy pass + proof strip expanded to thirteen named
   engagements under "Where I've done the work", tagline softened. ADR 0017).
 
 ---
@@ -105,6 +105,13 @@ task board and indexes them.
   proof strip from four names to thirteen named past engagements (employment + consulting + advisory),
   recognizable-brand-first, under the honest umbrella "Where I've done the work"; dropped "as a CTO" as
   a row item. Updated `CLAUDE.md` (allowed-proof rule + landing-copy spec) to match. See ADR 0017.
+- [x] **T36** Contact section hierarchy: the three get-in-touch surfaces (form, call link, email) were
+  styled so only the form's Send read as a button, and email appeared twice (left-column line + the
+  note under Send). Reframed as call-first: promoted "Book a 30-minute call" to the copper **primary**
+  button (booking ends in a scheduled meeting; the calendar flow already collects the same name/email/
+  context as the form, so it's a better-outcome path, not a faster form), demoted the form's Send to
+  ghost, and removed the duplicate email line (email kept only as the quiet note under Send). Touches
+  `index.html` + `assets/css/style.css` only. No ADR (styling/copy refinement, no positioning/DNS change).
 
 ### In progress
 | ID | Task | Owner | Since |
