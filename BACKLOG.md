@@ -40,7 +40,7 @@ task board and indexes them.
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
-- **Last updated:** 2026-06-09 by `claude` (T23 deferred; T29 split into T38 website-GA4 + T39 Substack-GA4 with setup instructions). Prior: (T37: brand-voice single source of truth moved to the private vault, ADR 0018; T36 + PR #6: contact reframed call-first, duplicate email cut, book-a-call icon cache-proofed). Prior: (T35: copy pass + proof strip expanded to thirteen named
+- **Last updated:** 2026-09-14 by `claude` (T40: Delivery Lab offer page at `/delivery-lab/`, page gates script, ADR 0019, PR #10). Prior: 2026-06-09 (T23 deferred; T29 split into T38 website-GA4 + T39 Substack-GA4 with setup instructions). Prior: (T37: brand-voice single source of truth moved to the private vault, ADR 0018; T36 + PR #6: contact reframed call-first, duplicate email cut, book-a-call icon cache-proofed). Prior: (T35: copy pass + proof strip expanded to thirteen named
   engagements under "Where I've done the work", tagline softened. ADR 0017).
 
 ---
@@ -128,17 +128,29 @@ task board and indexes them.
   files + `CLAUDE.local.md` are outside the public repo). Optional follow-up: de-dupe the 3 remaining
   scattered vault voice docs so they defer to `VOICE.md`.
 
+- [x] **T40** Three-Body Delivery Lab published as a standalone offer page at `/delivery-lab/` (v1.1).
+  New page shares `style.css` (additive `.lab-` rules only); home gets a nav link + one teaser band; header,
+  footer and the inline motion script are identical across `index.html`, `404.html` and the Lab page (links
+  made root-relative). Per-page OG card `og-delivery-lab.png` from `social/src/og-delivery-lab.html` via
+  `render.sh`. Sitemap lists the URL. No pricing, no prospect names, no outcome claims (ADR 0008).
+  `scripts/check_pages.py` now gates every page (forbidden strings, chrome equality, metadata, assets):
+  `130 PASS, 0 FAIL, 1 WARN` (home meta description is 194 chars, pre-existing). Local serve proves
+  `/delivery-lab/` 200 and `/delivery-lab` 301 to the trailing slash, matching live GitHub Pages behaviour.
+  Screenshots at 1280x800 and a true 390px viewport: fold shows headline + CTA, no horizontal scroll.
+  ADR 0019. PR #10. Debt: shared chrome is hand-copied in three files (held equal by the gate; partials at
+  v2). `(needs: user)` after merge, paste `curl -sI https://tilinthecloud.com/delivery-lab/` (expect 200) here.
+
 ### In progress
 | ID | Task | Owner | Since |
 |----|------|-------|-------|
-| T40 | Publish the Three-Body Delivery Lab as a standalone offer page at `/delivery-lab/` (v1.1): new page sharing `style.css`, home nav link + teaser band, per-page OG card, `scripts/check_pages.sh` gate (forbidden strings, chrome equality, metadata, assets), ADR 0019. No pricing, no prospect or outcome claims. | claude | 2026-09-14 |
+| -  | (none) | - | - |
 
 ### Todo / backlog
 
 Grouped by priority (working-agreement rule 7). Triaged issues carry the matching `priority: *` label.
 
 **Now**
-- (T40 in progress, see above)
+- (nothing queued; T40 shipped as PR #10, awaiting merge)
 
 **Next**
 - [ ] **T38** Google Analytics (GA4) on the **website** (`index.html` + `404.html`, static on GitHub
