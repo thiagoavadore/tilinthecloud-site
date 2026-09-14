@@ -44,3 +44,6 @@ same session without touching the same file.
 | [0014](./0014-social-share-asset-system.md) | Social / share asset system (OG card + LinkedIn assets) | Accepted |
 | [0015](./0015-keep-internal-material-out-of-public-repo.md) | Keep internal / sensitive material out of the public repo | Accepted |
 | [0016](./0016-newsletter-writing-subdomain-substack.md) | Newsletter on writing.tilinthecloud.com via Substack custom domain | Accepted |
+| [0017](./0017-expand-proof-strip-to-named-engagements.md) | Expand the proof strip to named past engagements | Accepted |
+| [0018](./0018-brand-voice-source-of-truth-in-vault.md) | Brand voice single source of truth in the private vault | Accepted |
+| [0019](./0019-standalone-offer-pages.md) | Offer pages as standalone static pages under `/<offer>/` | Accepted |

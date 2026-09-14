@@ -220,3 +220,5 @@ Durable decisions are ADRs in [docs/decisions/](./docs/decisions/). Current inde
 | [0015](./docs/decisions/0015-keep-internal-material-out-of-public-repo.md) | Keep internal / sensitive material out of the public repo | Accepted |
 | [0016](./docs/decisions/0016-newsletter-writing-subdomain-substack.md) | Newsletter on `writing.` subdomain via Substack custom domain | Accepted |
 | [0017](./docs/decisions/0017-expand-proof-strip-to-named-engagements.md) | Expand the proof strip to named past engagements | Accepted |
+| [0018](./docs/decisions/0018-brand-voice-source-of-truth-in-vault.md) | Brand voice single source of truth in the private vault | Accepted |
+| [0019](./docs/decisions/0019-standalone-offer-pages.md) | Offer pages as standalone static pages under `/<offer>/` | Accepted |
