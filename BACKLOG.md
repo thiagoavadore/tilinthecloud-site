@@ -131,14 +131,14 @@ task board and indexes them.
 ### In progress
 | ID | Task | Owner | Since |
 |----|------|-------|-------|
-| -  | (none) | - | - |
+| T40 | Publish the Three-Body Delivery Lab as a standalone offer page at `/delivery-lab/` (v1.1): new page sharing `style.css`, home nav link + teaser band, per-page OG card, `scripts/check_pages.sh` gate (forbidden strings, chrome equality, metadata, assets), ADR 0019. No pricing, no prospect or outcome claims. | claude | 2026-09-14 |
 
 ### Todo / backlog
 
 Grouped by priority (working-agreement rule 7). Triaged issues carry the matching `priority: *` label.
 
 **Now**
-- (nothing queued; the site is live and the rest is user-blocked or v2)
+- (T40 in progress, see above)
 
 **Next**
 - [ ] **T38** Google Analytics (GA4) on the **website** (`index.html` + `404.html`, static on GitHub
