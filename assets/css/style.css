@@ -310,3 +310,45 @@ form.contact-form .btn { justify-self: start; margin-top: .3rem; }
   .orbit-spin, .body-core { animation: none !important; }
   .btn:hover, .btn-primary:hover, .btn-ghost:hover { transform: none; }
 }
+
+/* ---------- Offer pages (/delivery-lab/) ---------- */
+.nav a[aria-current="page"] { color: var(--bone); }
+.lab-teaser-grid { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; }
+.lab-teaser-grid h2 {
+  font-family: var(--display); font-weight: 600;
+  font-size: clamp(1.7rem, 3.2vw, 2.5rem); line-height: 1.08;
+  letter-spacing: -.02em; margin-top: 1.1rem; max-width: 24ch;
+}
+.lab-teaser-grid .lab-teaser-sub { color: var(--bone-dim); margin-top: 1rem; max-width: 58ch; }
+@media (max-width: 720px) { .lab-teaser-grid { grid-template-columns: 1fr; } }
+
+.lab-hero h1 { font-size: clamp(2.2rem, 5vw, 3.7rem); }
+.lab-hero .lede { max-width: 46ch; }
+.lab-sub { color: var(--bone-faint); font-size: .95rem; margin-top: 1.3rem; }
+
+.lab-outcomes {
+  list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+  background: var(--ink-line); border: 1px solid var(--ink-line); border-radius: 14px; overflow: hidden;
+}
+.lab-outcomes li { background: var(--ink-raised); padding: 1.25rem 1.5rem 1.25rem 2.6rem; position: relative; font-size: 1.02rem; }
+.lab-outcomes li::before {
+  content: ""; position: absolute; left: 1.5rem; top: 1.85rem;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--copper);
+}
+@media (max-width: 640px) { .lab-outcomes { grid-template-columns: 1fr; } }
+
+.lab-fit { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); }
+.lab-fit h3 { font-family: var(--display); font-weight: 600; font-size: 1.3rem; margin-bottom: .6rem; letter-spacing: -.01em; }
+.lab-fit p { color: var(--bone-dim); max-width: 48ch; }
+@media (max-width: 640px) { .lab-fit { grid-template-columns: 1fr; } }
+
+.lab-faq details { border-top: 1px solid var(--ink-line); padding: 1.1rem 0; }
+.lab-faq details:last-child { border-bottom: 1px solid var(--ink-line); }
+.lab-faq summary {
+  cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 1rem;
+  font-family: var(--display); font-weight: 600; font-size: 1.15rem; letter-spacing: -.01em;
+}
+.lab-faq summary::-webkit-details-marker { display: none; }
+.lab-faq summary::after { content: "+"; color: var(--copper); font-weight: 500; flex: none; }
+.lab-faq details[open] summary::after { content: "\2212"; }
+.lab-faq details p { color: var(--bone-dim); margin-top: .7rem; max-width: 64ch; }
