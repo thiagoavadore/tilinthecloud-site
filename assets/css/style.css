@@ -41,9 +41,10 @@
   --ink:        #0F1318;   /* page ground            */
   --ink-raised: #141921;   /* cards / raised panels  */
   --ink-line:   #232A34;   /* hairlines              */
+  --line-control: #5C6879; /* control borders (3.3:1 on ink, 3.1:1 on raised) */
   --bone:       #ECE7DB;   /* primary text           */
   --bone-dim:   #9AA0A8;   /* secondary text         */
-  --bone-faint: #5E6671;   /* tertiary / labels      */
+  --bone-faint: #8A919A;   /* tertiary / labels (5.9:1 on ink, AA) */
   --copper:     #CC7A3B;   /* accent                 */
   --copper-lo:  #E0995E;   /* accent hover / light   */
   --copper-glow: rgba(204,122,59,.16);
@@ -126,14 +127,16 @@ section { position: relative; }
 .brand-logo { height: 30px; width: auto; display: block; }
 @media (max-width: 420px) { .brand-logo { height: 26px; } }
 .nav { display: flex; align-items: center; gap: clamp(1rem, 3vw, 2rem); }
-.nav a { font-weight: 500; font-size: .95rem; color: var(--bone-dim); transition: color .2s var(--ease); }
+.nav a { font-weight: 500; font-size: .95rem; color: var(--bone-dim); padding-block: .3rem; transition: color .2s var(--ease); }
 .nav a:hover { color: var(--bone); }
 .nav .nav-cta {
-  color: var(--bone); border: 1px solid var(--ink-line); border-radius: 999px;
+  color: var(--bone); border: 1px solid var(--line-control); border-radius: 999px;
   padding: .42rem 1rem; transition: border-color .2s var(--ease), color .2s var(--ease);
 }
 .nav .nav-cta:hover { border-color: var(--copper); color: var(--copper-lo); }
-@media (max-width: 560px) { .nav .nav-plain { display: none; } }
+/* Phones keep the offer link so the Lab stays reachable from the header; the rest lives in the footer */
+@media (max-width: 560px) { .nav .nav-plain:not(.nav-offer) { display: none; } }
+@media (max-width: 360px) { .nav .nav-offer { display: none; } }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -147,7 +150,7 @@ section { position: relative; }
 .btn:active { transform: translateY(1px); }
 .btn-primary { background: var(--copper); color: #1a1206; }
 .btn-primary:hover { background: var(--copper-lo); transform: translateY(-2px); }
-.btn-ghost { border: 1px solid var(--ink-line); color: var(--bone); }
+.btn-ghost { border: 1px solid var(--line-control); color: var(--bone); }
 .btn-ghost:hover { border-color: var(--copper); color: var(--copper-lo); transform: translateY(-2px); }
 .btn .arrow { transition: transform .2s var(--ease); }
 .btn:hover .arrow { transform: translateX(3px); }
@@ -259,13 +262,14 @@ form.contact-form { display: grid; gap: 1rem; }
 .field label { font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--bone-faint); }
 .field input, .field textarea {
   font: inherit; color: var(--bone); background: var(--ink-raised);
-  border: 1px solid var(--ink-line); border-radius: 10px; padding: .8rem .95rem;
+  border: 1px solid var(--line-control); border-radius: 10px; padding: .8rem .95rem;
   transition: border-color .2s var(--ease), background .2s var(--ease);
 }
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--copper); background: #161C25; }
 .field textarea { min-height: 120px; resize: vertical; }
 form.contact-form .btn { justify-self: start; margin-top: .3rem; }
 .form-note { color: var(--bone-faint); font-size: .85rem; }
+.form-note a { color: var(--copper-lo); text-decoration: underline; text-underline-offset: .15em; }
 @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; } }
 
 /* ---------- Footer ---------- */
@@ -274,16 +278,21 @@ form.contact-form .btn { justify-self: start; margin-top: .3rem; }
 .site-foot .legal { color: var(--bone-faint); font-size: .9rem; }
 .site-foot .legal b { color: var(--bone-dim); font-weight: 600; }
 .site-foot .foot-links { display: flex; gap: 1.4rem; font-size: .9rem; }
-.site-foot .foot-links a { color: var(--bone-dim); transition: color .2s var(--ease); }
+.site-foot .foot-links a { color: var(--bone-dim); padding-block: .3rem; transition: color .2s var(--ease); }
 .site-foot .foot-links a:hover { color: var(--copper-lo); }
 
 /* ---------- Accessibility ---------- */
-:focus-visible { outline: 2px solid var(--copper); outline-offset: 3px; border-radius: 4px; }
+:focus-visible { outline: 2px solid var(--copper); outline-offset: 3px; }
 .skip-link { position: absolute; left: -9999px; top: .5rem; background: var(--copper); color: #1a1206; padding: .6rem 1rem; border-radius: 8px; font-weight: 600; z-index: 100; }
 .skip-link:focus { left: var(--gut); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
-/* ---------- Motion: staggered load ---------- */
-.reveal { opacity: 0; transform: translateY(18px); }
+/* ---------- Motion: staggered load ----------
+   Hidden-until-revealed only when the page has JS (html.js is set by a one-liner in <head>),
+   so content stays visible with scripts blocked or unsupported. */
+.js .reveal { opacity: 0; transform: translateY(18px); }
+/* The h1 slides in without a fade so it counts as the LCP element at first paint */
+.js .hero h1.reveal { opacity: 1; }
 .is-ready .reveal { animation: rise .9s var(--ease) forwards; }
 .is-ready .reveal[data-d="1"] { animation-delay: .05s; }
 .is-ready .reveal[data-d="2"] { animation-delay: .14s; }
@@ -293,7 +302,7 @@ form.contact-form .btn { justify-self: start; margin-top: .3rem; }
 @keyframes rise { to { opacity: 1; transform: none; } }
 
 /* Scroll-in for lower sections */
-.inview { opacity: 0; transform: translateY(22px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.js .inview { opacity: 0; transform: translateY(22px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
 .inview.seen { opacity: 1; transform: none; }
 
 /* Orbit drift */
@@ -309,11 +318,13 @@ form.contact-form .btn { justify-self: start; margin-top: .3rem; }
   .reveal, .inview { opacity: 1 !important; transform: none !important; animation: none !important; transition: none !important; }
   .orbit-spin, .body-core { animation: none !important; }
   .btn:hover, .btn-primary:hover, .btn-ghost:hover { transform: none; }
+  .btn:hover .arrow { transform: none; }
 }
 
 /* ---------- Offer pages (/delivery-lab/) ---------- */
 .nav a[aria-current="page"] { color: var(--bone); }
 .lab-teaser-grid { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; }
+.lab-teaser-grid > * { min-width: 0; }
 .lab-teaser-grid h2 {
   font-family: var(--display); font-weight: 600;
   font-size: clamp(1.7rem, 3.2vw, 2.5rem); line-height: 1.08;
@@ -349,6 +360,7 @@ form.contact-form .btn { justify-self: start; margin-top: .3rem; }
   font-family: var(--display); font-weight: 600; font-size: 1.15rem; letter-spacing: -.01em;
 }
 .lab-faq summary::-webkit-details-marker { display: none; }
-.lab-faq summary::after { content: "+"; color: var(--copper); font-weight: 500; flex: none; }
-.lab-faq details[open] summary::after { content: "\2212"; }
+/* Marker glyphs get empty alt text so screen readers do not announce "plus"; state comes from <details> itself */
+.lab-faq summary::after { content: "+" / ""; color: var(--copper); font-weight: 500; flex: none; }
+.lab-faq details[open] summary::after { content: "\2212" / ""; }
 .lab-faq details p { color: var(--bone-dim); margin-top: .7rem; max-width: 64ch; }
