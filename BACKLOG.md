@@ -40,7 +40,7 @@ task board and indexes them.
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
-- **Last updated:** 2026-09-15 by `claude` (T38 rewritten to GoatCounter + per-channel calendar links after the lead-gen brainstorm; T39 parked). Prior: 2026-09-15 (T41: accessibility and frontend pass, PR #11). Prior: 2026-09-14 (T40: Delivery Lab offer page at `/delivery-lab/`, page gates script, ADR 0019, PR #10). Prior: 2026-06-09 (T23 deferred; T29 split into T38 website-GA4 + T39 Substack-GA4 with setup instructions). Prior: (T37: brand-voice single source of truth moved to the private vault, ADR 0018; T36 + PR #6: contact reframed call-first, duplicate email cut, book-a-call icon cache-proofed). Prior: (T35: copy pass + proof strip expanded to thirteen named
+- **Last updated:** 2026-09-15 by `claude` (T38 closed: GoatCounter click counting live, PR #12, live check pasted). Prior: 2026-09-15 (T38 rewritten to GoatCounter + per-channel calendar links after the lead-gen brainstorm; T39 parked). Prior: 2026-09-15 (T41: accessibility and frontend pass, PR #11). Prior: 2026-09-14 (T40: Delivery Lab offer page at `/delivery-lab/`, page gates script, ADR 0019, PR #10). Prior: 2026-06-09 (T23 deferred; T29 split into T38 website-GA4 + T39 Substack-GA4 with setup instructions). Prior: (T37: brand-voice single source of truth moved to the private vault, ADR 0018; T36 + PR #6: contact reframed call-first, duplicate email cut, book-a-call icon cache-proofed). Prior: (T35: copy pass + proof strip expanded to thirteen named
   engagements under "Where I've done the work", tagline softened. ADR 0017).
 
 ---
@@ -154,30 +154,22 @@ task board and indexes them.
   the home page; no `apple-touch-icon` PNG yet. Gate: `132 PASS, 0 FAIL, 1 WARN`; no-JS render and 320/390
   phone frames verified by screenshot. Chrome and CSS only, no copy change, no ADR.
 
+- [x] **T38** Cookieless click counting by source with GoatCounter + per-channel calendar links (ADR 0020, PR #12,
+  merged 2026-09-15 as `9d264a6`). Gates: `check_pages.py` all green, `check_clicks.py` 22 PASS. Live check
+  2026-09-15: `/?utm_source=linkedin` swapped the booking href to the linkedin schedule, both clicks POSTed
+  `/count` with HTTP 200, and the GoatCounter dashboard listed `click-book-linkedin` and `click-email-linkedin`
+  (2 visits, Netherlands). T39 stays parked.
 ### In progress
 | ID | Task | Owner | Since |
 |----|------|-------|-------|
-| T38 | GoatCounter click counting by source + per-channel calendar links (ADR 0020) | claude | 2026-09-15 |
+| -  | (none) | - | - |
 
 ### Todo / backlog
 
 Grouped by priority (working-agreement rule 7). Triaged issues carry the matching `priority: *` label.
 
 **Now**
-- [ ] **T38** Cookieless click counting with **GoatCounter** (replaces the GA4 plan). No consent banner
-  needed per GoatCounter's own docs: no cookies, no GDPR notice, free hosted, one script tag
-  (`https://gc.zgo.at/count.js`). Exactly two events, `click-book` and `click-email`, split by source.
-  - **Source:** `utm_source` from the landing URL, kept in `sessionStorage`; falls back to
-    `document.referrer`, else `direct`.
-  - **Booking button:** swap its href to the per-channel Google Calendar appointment schedule URL for the
-    stored source (one schedule per channel, same name, different URL).
-  - **Pages:** `index.html`, `delivery-lab/index.html`, `404.html`.
-  - **ADR (short):** GoatCounter over GA4; the one external-script exception to the "no external runtime
-    deps" rule; supersedes the "privacy-light pageview counter" note in CLAUDE.md "Out of scope for v1".
-  - `(needs: user)` create the GoatCounter site code. `(needs: user)` create the per-channel calendar
-    schedules (`linkedin`, `substack`, `site`) and paste their URLs.
-  - **Verify:** on the live site, the GoatCounter dashboard shows your own click on each button with the
-    right source.
+- (nothing queued)
 
 **Next**
 - (nothing queued)
