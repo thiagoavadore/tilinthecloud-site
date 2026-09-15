@@ -40,7 +40,7 @@ task board and indexes them.
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
-- **Last updated:** 2026-09-14 by `claude` (T40: Delivery Lab offer page at `/delivery-lab/`, page gates script, ADR 0019, PR #10). Prior: 2026-06-09 (T23 deferred; T29 split into T38 website-GA4 + T39 Substack-GA4 with setup instructions). Prior: (T37: brand-voice single source of truth moved to the private vault, ADR 0018; T36 + PR #6: contact reframed call-first, duplicate email cut, book-a-call icon cache-proofed). Prior: (T35: copy pass + proof strip expanded to thirteen named
+- **Last updated:** 2026-09-15 by `claude` (T41: accessibility and frontend pass, PR #11). Prior: 2026-09-14 (T40: Delivery Lab offer page at `/delivery-lab/`, page gates script, ADR 0019, PR #10). Prior: 2026-06-09 (T23 deferred; T29 split into T38 website-GA4 + T39 Substack-GA4 with setup instructions). Prior: (T37: brand-voice single source of truth moved to the private vault, ADR 0018; T36 + PR #6: contact reframed call-first, duplicate email cut, book-a-call icon cache-proofed). Prior: (T35: copy pass + proof strip expanded to thirteen named
   engagements under "Where I've done the work", tagline softened. ADR 0017).
 
 ---
@@ -138,7 +138,21 @@ task board and indexes them.
   `/delivery-lab/` 200 and `/delivery-lab` 301 to the trailing slash, matching live GitHub Pages behaviour.
   Screenshots at 1280x800 and a true 390px viewport: fold shows headline + CTA, no horizontal scroll.
   ADR 0019. PR #10. Debt: shared chrome is hand-copied in three files (held equal by the gate; partials at
-  v2). `(needs: user)` after merge, paste `curl -sI https://tilinthecloud.com/delivery-lab/` (expect 200) here.
+  v2). Live check 2026-09-15 after merge: `/delivery-lab/` 200, `/delivery-lab` 301 to the trailing slash, OG image 200 (Pages build 07:48:58Z).
+
+- [x] **T41** Accessibility and frontend pass on the Lab page and shared chrome, from a specialist review
+  (1 blocker, 5 should-fix, 8 nice-to-have). Fixed: content was invisible without JS (`.reveal`/`.inview`
+  hid everything until the script ran) so the hide now applies only under `html.js`, set by a one-liner in
+  `<head>`, plus an IntersectionObserver guard; `--bone-faint` raised to `#8A919A` (5.9:1 on ink, was 3.2:1)
+  and a new `--line-control` `#5C6879` for ghost buttons, nav pill and form fields (3.3:1, was 1.3:1);
+  `:focus-visible` no longer squares the pill buttons; the inline mailto link is underlined via
+  `.form-note a` instead of colour only; reduced-motion also stops the arrow slide; the h1 slides without a
+  fade so it counts as LCP at first paint; Switzer 600 preloaded; `theme-color` meta; `sr-only` hint on the
+  two new-tab calendar links; FAQ marker glyphs get empty alt text; skip link on the home page goes to
+  `#main`; the "Delivery Lab" link stays visible in the phone header down to 360px; nav and footer links get
+  more tap height. Left as is (noted): `.dot` inline styles and `role="list"` on the three-cell grid mirror
+  the home page; no `apple-touch-icon` PNG yet. Gate: `132 PASS, 0 FAIL, 1 WARN`; no-JS render and 320/390
+  phone frames verified by screenshot. Chrome and CSS only, no copy change, no ADR.
 
 ### In progress
 | ID | Task | Owner | Since |
@@ -150,7 +164,7 @@ task board and indexes them.
 Grouped by priority (working-agreement rule 7). Triaged issues carry the matching `priority: *` label.
 
 **Now**
-- (nothing queued; T40 shipped as PR #10, awaiting merge)
+- (nothing queued; T40 live, T41 in PR #11)
 
 **Next**
 - [ ] **T38** Google Analytics (GA4) on the **website** (`index.html` + `404.html`, static on GitHub
