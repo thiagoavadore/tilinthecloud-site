@@ -40,7 +40,7 @@ task board and indexes them.
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
-- **Last updated:** 2026-09-15 by `claude` (T41: accessibility and frontend pass, PR #11). Prior: 2026-09-14 (T40: Delivery Lab offer page at `/delivery-lab/`, page gates script, ADR 0019, PR #10). Prior: 2026-06-09 (T23 deferred; T29 split into T38 website-GA4 + T39 Substack-GA4 with setup instructions). Prior: (T37: brand-voice single source of truth moved to the private vault, ADR 0018; T36 + PR #6: contact reframed call-first, duplicate email cut, book-a-call icon cache-proofed). Prior: (T35: copy pass + proof strip expanded to thirteen named
+- **Last updated:** 2026-09-15 by `claude` (T38 rewritten to GoatCounter + per-channel calendar links after the lead-gen brainstorm; T39 parked). Prior: 2026-09-15 (T41: accessibility and frontend pass, PR #11). Prior: 2026-09-14 (T40: Delivery Lab offer page at `/delivery-lab/`, page gates script, ADR 0019, PR #10). Prior: 2026-06-09 (T23 deferred; T29 split into T38 website-GA4 + T39 Substack-GA4 with setup instructions). Prior: (T37: brand-voice single source of truth moved to the private vault, ADR 0018; T36 + PR #6: contact reframed call-first, duplicate email cut, book-a-call icon cache-proofed). Prior: (T35: copy pass + proof strip expanded to thirteen named
   engagements under "Where I've done the work", tagline softened. ADR 0017).
 
 ---
@@ -157,45 +157,35 @@ task board and indexes them.
 ### In progress
 | ID | Task | Owner | Since |
 |----|------|-------|-------|
-| -  | (none) | - | - |
+| T38 | GoatCounter click counting by source + per-channel calendar links (ADR 0020) | claude | 2026-09-15 |
 
 ### Todo / backlog
 
 Grouped by priority (working-agreement rule 7). Triaged issues carry the matching `priority: *` label.
 
 **Now**
-- (nothing queued; T40 live, T41 in PR #11)
+- [ ] **T38** Cookieless click counting with **GoatCounter** (replaces the GA4 plan). No consent banner
+  needed per GoatCounter's own docs: no cookies, no GDPR notice, free hosted, one script tag
+  (`https://gc.zgo.at/count.js`). Exactly two events, `click-book` and `click-email`, split by source.
+  - **Source:** `utm_source` from the landing URL, kept in `sessionStorage`; falls back to
+    `document.referrer`, else `direct`.
+  - **Booking button:** swap its href to the per-channel Google Calendar appointment schedule URL for the
+    stored source (one schedule per channel, same name, different URL).
+  - **Pages:** `index.html`, `delivery-lab/index.html`, `404.html`.
+  - **ADR (short):** GoatCounter over GA4; the one external-script exception to the "no external runtime
+    deps" rule; supersedes the "privacy-light pageview counter" note in CLAUDE.md "Out of scope for v1".
+  - `(needs: user)` create the GoatCounter site code. `(needs: user)` create the per-channel calendar
+    schedules (`linkedin`, `substack`, `site`) and paste their URLs.
+  - **Verify:** on the live site, the GoatCounter dashboard shows your own click on each button with the
+    right source.
 
 **Next**
-- [ ] **T38** Google Analytics (GA4) on the **website** (`index.html` + `404.html`, static on GitHub
-  Pages). Splits the site half out of the old T29. `(needs: user for the GA4 property)`
-  - **Set up the property (user):** at analytics.google.com → Admin → Create property → add a **Web
-    data stream** for `https://tilinthecloud.com` → copy the **Measurement ID** (`G-XXXXXXXXXX`).
-  - **Implement (agent):** paste the gtag.js snippet immediately before `</head>` in **both**
-    `index.html` and `404.html` (no build step, so it's a literal paste). The Measurement ID is a
-    public client-side value, fine to commit (it is not a secret):
-    ```html
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-    ```
-  - **Decide first (record as a short ADR):** GA pulls third-party JS from `googletagmanager.com`,
-    which cuts against CLAUDE.md's "no external runtime deps / CDNs where avoidable" and the v1
-    "privacy-light" stance, and the buyers + Thiago are EU, so GA's cookies / data-to-Google generally
-    need a **consent banner (GDPR / ePrivacy)** and a privacy line before `gtag` loads (Consent Mode
-    v2). Alternative: a cookieless privacy-light tool (Plausible / GoatCounter / Cloudflare Web
-    Analytics) needs no banner. The ADR supersedes the "privacy-light pageview counter" note in
-    CLAUDE.md "Out of scope for v1".
-  - **Verify:** on the live site, GA4 **Realtime** shows your own visit; the network tab loads
-    `gtag.js`.
+- (nothing queued)
+
+**Later**
 - [ ] **T39** Google Analytics (GA4) on the **Substack** ("The Recovering CTO",
   `writing.tilinthecloud.com`). Splits the newsletter half out of the old T29. No code, Substack
-  injects the tag natively. `(needs: user — Substack admin)`
+  injects the tag natively. `(needs: user, Substack admin)`
   - **Set up (user):** Substack **Dashboard → Settings → Analytics** (the "Advertising analytics"
     area) → paste the GA4 **Measurement ID** (`G-XXXXXXXXXX`) into "Google Analytics Measurement ID"
     → Save. Substack handles GA4 natively and reports page views, sign-ups, and paid subscriptions
@@ -208,10 +198,10 @@ Grouped by priority (working-agreement rule 7). Triaged issues carry the matchin
     public reading experience; Substack controls its own cookie/consent handling, verify what it
     surfaces.
   - **Verify:** GA4 Realtime shows a visit to a `writing.tilinthecloud.com` post.
-
-**Later**
+  - **Parked 2026-09-15:** Substack's own stats cover the top of the funnel; revisit only if a unified view
+    is ever needed.
 - [ ] **T23** Add real proof-strip numbers (ADR 0008). `(needs: user)` publishable figures.
-  **(Deferred 2026-06-09 — not planned; revisit only if a concrete need comes up.)**
+  **(Deferred 2026-06-09, not planned; revisit only if a concrete need comes up.)**
 
 ---
 
