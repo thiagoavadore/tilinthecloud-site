@@ -18,3 +18,6 @@ build/
 CLAUDE.local.md
 drafts-local/
 assets/brand/social/*-copy.md
+
+# BMad session output (memlogs, brainstorm artifacts). Local only.
+_bmad-output/

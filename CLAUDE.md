@@ -95,4 +95,4 @@ Thiago runs **modernization, team redesign, and GenAI adoption as ONE program**.
 
 ## Out of scope for v1
 
-Blog/content pages, CMS, analytics beyond a privacy-light pageview counter (only if trivial), newsletter capture, multi-page nav, dark/light toggles, animations beyond subtle. If it is not one of the five sections above, it waits for v2.
+Blog/content pages, CMS, analytics beyond the cookieless click counting in ADR 0020 (GoatCounter, no consent banner), newsletter capture, multi-page nav, dark/light toggles, animations beyond subtle. If it is not one of the five sections above, it waits for v2.
