@@ -165,6 +165,8 @@ task board and indexes them.
   Gates: `check_pages.py` all green. Live check 2026-09-23: home serves the new title and hero, Lab subtitle
   reads "One real flow, governed and evidenced.", both OG images 200 with the committed byte sizes.
   LinkedIn and Substack covers still say "one program" (uploaded by hand, noted in the vault).
+  Post Inspector kept the old images (LinkedIn caches by URL), so PR #14 (`060d82c`) adds `?v=2` to the
+  share-image URLs; live check: all three pages serve `?v=2`, both images 200.
 ### In progress
 | ID | Task | Owner | Since |
 |----|------|-------|-------|
