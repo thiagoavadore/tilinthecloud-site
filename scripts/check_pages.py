@@ -136,14 +136,15 @@ def g3_metadata(name, html, canonical, og_image):
         report(bool(meta(html, "property", key)), "G3", f"{name}: {key}")
     ogd = meta(html, "property", "og:description")
     report(0 < len(ogd) < 160, "G3", f"{name}: og:description under 160 chars ({len(ogd)})")
-    report(meta(html, "property", "og:image") == og_image, "G3", f"{name}: og:image is {og_image.rsplit('/', 1)[-1]}")
+    # The ?v= query busts LinkedIn's image cache when a card is re-rendered
+    report(meta(html, "property", "og:image").split("?")[0] == og_image, "G3", f"{name}: og:image is {og_image.rsplit('/', 1)[-1]}")
     report(meta(html, "property", "og:image:width") == "1200" and meta(html, "property", "og:image:height") == "630", "G3", f"{name}: og:image 1200x630 declared")
     for key in ("twitter:card", "twitter:image"):
         report(bool(meta(html, "name", key)), "G3", f"{name}: {key}")
 
 
 def g4_assets(name, html):
-    refs = set(re.findall(r'(?:src|href|content)="(?:https://tilinthecloud\.com)?(/assets/[^"?#]+)"', html))
+    refs = set(re.findall(r'(?:src|href|content)="(?:https://tilinthecloud\.com)?(/assets/[^"?#]+)(?:\?[^"]*)?"', html))
     for ref in sorted(refs):
         report((ROOT / ref.lstrip("/")).is_file(), "G4", f"{name}: {ref} exists")
     for ref in refs:
