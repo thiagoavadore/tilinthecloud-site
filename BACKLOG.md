@@ -162,7 +162,7 @@ task board and indexes them.
 ### In progress
 | ID | Task | Owner | Since |
 |----|------|-------|-------|
-| T42 | Roll out AI-governance positioning (vault Decision #27): ADR 0021, CLAUDE.md mirror, home + Lab copy | `claude` | 2026-09-23 |
+| T42 | Roll out AI-governance positioning (vault Decision #27): ADR 0021, CLAUDE.md mirror, home + Lab copy. PR #13, awaiting merge | `claude` | 2026-09-23 |
 
 ### Todo / backlog
 
