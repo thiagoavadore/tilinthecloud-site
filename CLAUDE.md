@@ -76,7 +76,7 @@ The lead is **AI governance in practice: governance that runs in the delivery sy
 >
 > [Talk to me] · [Read the writing]
 >
-> Governance fails when only one body moves. We take one real piece of work, decide who owns which rules, and build the guardrails where the code ships: architecture, teams and AI capability moving together. Engineering work, not legal advice. Hands-on, and on the hook for the outcome.
+> Governance fails when only one body moves. A policy for the AI changes nothing if the pipeline and the decision rights stay as they were. So we take one real piece of work, decide who owns which rules, and build the guardrails where the code ships. This is engineering work, not legal advice. Hands-on, and on the hook for the outcome.
 >
 > Twenty years from statistician to CTO to hands-on architect. Where I've done the work: AWS, Nike, ASML, KLM, Rabobank, KBC, FC Utrecht, GRESB, LINKIT, Ticketscript, Icemobile, CHDR, INEP.
 >
