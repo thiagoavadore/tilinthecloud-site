@@ -48,5 +48,5 @@ names file already lists only that one.
   mirror stops contradicting the vault on confidentiality.
 - **Cost / risk:** "governance" can read as compliance consulting; the copy says engineering-side
   explicitly. The Lab has not run yet, so no outcome numbers go on the page (ADR 0008 still holds).
-- **Follow-ups:** the OG cover image (`assets/brand/social/og-cover.png`) still carries the "one
-  program, not three" line; regenerate it under ADR 0014 when the new card is designed.
+- **Follow-ups:** the home and Lab share cards are regenerated in the same change (ADR 0014). The
+  LinkedIn and Substack assets keep their current copy; revisit them with the LinkedIn headline change.
