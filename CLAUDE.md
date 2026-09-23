@@ -26,11 +26,11 @@ It **replaces a redirect** that currently sends tilinthecloud.com → Thiago's p
 
 ## Audience
 
-**Senior technical decision-makers: CTO, VP of Engineering, Head of Architecture.** They are the buyers. Tone must read as credible to *them*, not as a futurist.
+**Senior technical decision-makers: CTO, VP of Engineering, Head of Architecture, Head of Platform, and the C-level and senior directors who own AI risk.** They are the buyers. Tone must read as credible to *them*, not as a futurist.
 
 ## Positioning (the thesis)
 
-Thiago runs **modernization, team redesign, and GenAI adoption as ONE program**. Sequencing them the old way is how enterprises fall behind. The method is **"The Three-Body Program"**: three bodies (architecture, teams, AI capability) moving together. Persona: **a recovering CTO who still writes the code.**
+The lead is **AI governance in practice: governance that runs in the delivery system, not policy on paper.** Thiago decides with the customer who owns which rules, builds the guardrails into the pipeline, and leaves evidence that both auditors and engineers trust. Engineering-side, never compliance or legal advice. The method underneath is **"The Three-Body Program"**: three bodies (architecture, teams, AI capability) moving together, which is why governance fails when only one of them moves. Persona: **a recovering CTO who still writes the code.** See ADR 0021.
 
 ## Voice constraints (HARD RULES)
 
@@ -42,7 +42,7 @@ Thiago runs **modernization, team redesign, and GenAI adoption as ONE program**.
 - Voice: **direct, warm-professional.**
 - **NO em dashes anywhere.** Use commas, parentheses, colons, or "but"/"and".
 - **No corporate jargon**: never "leverage", "synergy", "align on", "double-click".
-- **Never the futurist**: every claim anchors to something hands-on with **a number on the outcome**.
+- **Never the futurist**: every claim anchors to something hands-on with **a number on the outcome**. Forward-looking framing for executives is allowed, but each forward claim pairs with a real implementation or a named source.
 - No arrows-and-boxes consultant fluff.
 
 ## Confidentiality (DO NOT VIOLATE)
@@ -51,36 +51,36 @@ Thiago runs **modernization, team redesign, and GenAI adoption as ONE program**.
   git history is public too. Anything committed here, drafts in `assets/`, notes in `docs/`, anywhere,
   is publicly fetchable. **Never commit internal, sensitive, or pre-announcement material.** Keep
   drafts and private notes local and gitignored (`drafts-local/`, `CLAUDE.local.md`).
-- **Never name the two confidential former employers** on the site, in copy, comments, commit
-  messages, or alt text. Their names are deliberately kept out of this public repo; they live in the
-  private vault (`TilinTheCloud/VOICE.md`) and are pulled into local sessions via the gitignored
-  `CLAUDE.local.md` for enforcement, never stored in this repo. See ADR 0018.
+- **Never name the confidential former employer** on the site, in copy, comments, commit
+  messages, or alt text. The name is deliberately kept out of this public repo; it lives in the
+  private vault (`TilinTheCloud/VOICE.md`) and is pulled into local sessions via the gitignored
+  `CLAUDE.local.md` for enforcement, never stored in this repo. See ADR 0018 and ADR 0021.
 - Quotable proof that IS allowed on the strip: **AWS, Nike, ASML, KLM, Rabobank, KBC, FC Utrecht, GRESB,
   LINKIT, Ticketscript, Icemobile, CHDR, INEP** (a mix of direct employment, consulting, and advisory
   work). The strip is headed **"Where I've done the work"**, a deliberately honest umbrella that claims
   no internal-employee status for any single name. **This list does NOT relax the rule above: still
-  never name the two confidential former employers.** See ADR 0017.
+  never name the confidential former employer.** See ADR 0017.
 
 ## v1 sections
 
-1. **Hero**: the thesis + one-line positioning + two buttons (Talk to me / Read the writing).
-2. **What I do**: the three-bodies framing, who it is for, the "hands-on, on the hook for the outcome" promise.
+1. **Hero**: the AI-governance lead (from the 30s pitch) + one-line positioning + two buttons (Talk to me / Read the writing).
+2. **What I do**: the three-bodies method (governance fails when only one body moves), who it is for, the "hands-on, on the hook for the outcome" promise.
 3. **Proof strip**: named past engagements under "Where I've done the work" (employment + consulting + advisory; see the allowed list above and ADR 0017).
 4. **Writing**: link out to Substack ("The Recovering CTO", at `writing.tilinthecloud.com` once live).
 5. **Contact**: a book-a-call link + `info@tilinthecloud.com` (wire the contact form to that address).
 
 ## Landing copy (Thiago's voice: refine wording, keep the meaning)
 
-> I run modernization, team redesign, and GenAI adoption as one program.
-> In the AI era, sequencing them is how you fall behind.
+> Most companies now have an AI policy. Very few can show it working.
+> Teams ship code with agents in days, but review, testing and approvals still run at human speed, and nobody is sure who is allowed to decide what. I fix that inside the delivery system, not in a PDF.
 >
 > [Talk to me] · [Read the writing]
 >
-> Most enterprises modernize the architecture, reorganize the teams, and adopt GenAI as three separate programs. The gaps between them are where the program stalls. I close those gaps: one operator, three bodies (architecture, teams, AI capability), moving together. Hands-on, and on the hook for the outcome.
+> Governance fails when only one body moves. A policy for the AI changes nothing if the pipeline and the decision rights stay as they were. So we take one real piece of work, decide who owns which rules, and build the guardrails where the code ships. This is engineering work, not legal advice. Hands-on, and on the hook for the outcome.
 >
 > Twenty years from statistician to CTO to hands-on architect. Where I've done the work: AWS, Nike, ASML, KLM, Rabobank, KBC, FC Utrecht, GRESB, LINKIT, Ticketscript, Icemobile, CHDR, INEP.
 >
-> If your architecture is six months ahead of your teams, and your GenAI strategy is a deck instead of a system, that is the gap I close. Let's talk: info@tilinthecloud.com
+> If your AI policy is a document and your agents already ship code, that is the gap I close. Let's talk: info@tilinthecloud.com
 
 ## Deploy target
 

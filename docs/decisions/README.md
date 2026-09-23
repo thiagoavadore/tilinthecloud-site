@@ -48,3 +48,4 @@ same session without touching the same file.
 | [0018](./0018-brand-voice-source-of-truth-in-vault.md) | Brand voice single source of truth in the private vault | Accepted |
 | [0019](./0019-standalone-offer-pages.md) | Offer pages as standalone static pages under `/<offer>/` | Accepted |
 | [0020](./0020-goatcounter-click-counting-by-source.md) | Count booking and email clicks by source with GoatCounter, not GA4 | Accepted |
+| [0021](./0021-lead-positioning-ai-governance-in-practice.md) | Lead positioning: AI governance in practice | Accepted |
