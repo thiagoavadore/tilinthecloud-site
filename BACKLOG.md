@@ -40,7 +40,7 @@ task board and indexes them.
   SSH alias from `~/.ssh/config`; plain `git@github.com` will not auth with the loaded key).
 - **Direction:** "Three-Body System" (Clash Display + Switzer, ink ground, copper accent,
   animated three-body mark). See ADR [0003](./docs/decisions/0003-three-body-visual-direction.md).
-- **Last updated:** 2026-09-15 by `claude` (T38 closed: GoatCounter click counting live, PR #12, live check pasted). Prior: 2026-09-15 (T38 rewritten to GoatCounter + per-channel calendar links after the lead-gen brainstorm; T39 parked). Prior: 2026-09-15 (T41: accessibility and frontend pass, PR #11). Prior: 2026-09-14 (T40: Delivery Lab offer page at `/delivery-lab/`, page gates script, ADR 0019, PR #10). Prior: 2026-06-09 (T23 deferred; T29 split into T38 website-GA4 + T39 Substack-GA4 with setup instructions). Prior: (T37: brand-voice single source of truth moved to the private vault, ADR 0018; T36 + PR #6: contact reframed call-first, duplicate email cut, book-a-call icon cache-proofed). Prior: (T35: copy pass + proof strip expanded to thirteen named
+- **Last updated:** 2026-09-23 by `claude` (T42 closed: AI-governance positioning live, PR #13, ADR 0021). Prior: 2026-09-15 (T38 closed: GoatCounter click counting live, PR #12, live check pasted). Prior: 2026-09-15 (T38 rewritten to GoatCounter + per-channel calendar links after the lead-gen brainstorm; T39 parked). Prior: 2026-09-15 (T41: accessibility and frontend pass, PR #11). Prior: 2026-09-14 (T40: Delivery Lab offer page at `/delivery-lab/`, page gates script, ADR 0019, PR #10). Prior: 2026-06-09 (T23 deferred; T29 split into T38 website-GA4 + T39 Substack-GA4 with setup instructions). Prior: (T37: brand-voice single source of truth moved to the private vault, ADR 0018; T36 + PR #6: contact reframed call-first, duplicate email cut, book-a-call icon cache-proofed). Prior: (T35: copy pass + proof strip expanded to thirteen named
   engagements under "Where I've done the work", tagline softened. ADR 0017).
 
 ---
@@ -159,10 +159,16 @@ task board and indexes them.
   2026-09-15: `/?utm_source=linkedin` swapped the booking href to the linkedin schedule, both clicks POSTed
   `/count` with HTTP 200, and the GoatCounter dashboard listed `click-book-linkedin` and `click-email-linkedin`
   (2 visits, Netherlands). T39 stays parked.
+
+- [x] **T42** Lead positioning moved to AI governance in practice (vault Decision #27, ADR 0021, PR #13,
+  merged 2026-09-23 as `d42b55a`). Home and Lab copy, share cards re-rendered, `CLAUDE.md` mirror synced.
+  Gates: `check_pages.py` all green. Live check 2026-09-23: home serves the new title and hero, Lab subtitle
+  reads "One real flow, governed and evidenced.", both OG images 200 with the committed byte sizes.
+  LinkedIn and Substack covers still say "one program" (uploaded by hand, noted in the vault).
 ### In progress
 | ID | Task | Owner | Since |
 |----|------|-------|-------|
-| T42 | Roll out AI-governance positioning (vault Decision #27): ADR 0021, CLAUDE.md mirror, home + Lab copy. PR #13, awaiting merge | `claude` | 2026-09-23 |
+| -  | (none) | - | - |
 
 ### Todo / backlog
 
