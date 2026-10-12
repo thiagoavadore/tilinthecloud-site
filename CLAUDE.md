@@ -12,7 +12,7 @@ v1 is a **single static one-pager**. It has exactly three jobs:
 2. **State the offer**: what Thiago does, in his voice.
 3. **Give a way to book**: a call link and `info@tilinthecloud.com`.
 
-It is a **front door and conversion surface, NOT a content channel**. The writing lives on Substack ("The Recovering CTO"). Do not turn this into a blog.
+It is a **front door and conversion surface, NOT a content channel**. The writing lives on Substack ("Thiago de Faria", at writing.tilinthecloud.com). Do not turn this into a blog.
 
 It **replaces a redirect** that currently sends tilinthecloud.com → Thiago's personal LinkedIn (a credibility leak for cold buyers).
 
@@ -30,7 +30,7 @@ It **replaces a redirect** that currently sends tilinthecloud.com → Thiago's p
 
 ## Positioning (the thesis)
 
-The lead is **AI governance in practice: governance that runs in the delivery system, not policy on paper.** Thiago decides with the customer who owns which rules, builds the guardrails into the pipeline, and leaves evidence that both auditors and engineers trust. Engineering-side, never compliance or legal advice. The method underneath is **"The Three-Body Program"**: three bodies (architecture, teams, AI capability) moving together, which is why governance fails when only one of them moves. Persona: **a recovering CTO who still writes the code.** See ADR 0021.
+The lead is **AI governance in practice: governance that runs in the delivery system, not policy on paper.** Thiago decides with the customer who owns which rules, builds the guardrails into the pipeline, and leaves evidence that both auditors and engineers trust. Engineering-side, never compliance or legal advice. The method underneath is **"The Three-Body Program"**: three bodies (architecture, teams, AI capability) moving together, which is why governance fails when only one of them moves. Persona: **Thiago himself, a hands-on data and AI architect who still writes the code.** See ADR 0021 and ADR 0022.
 
 ## Voice constraints (HARD RULES)
 
@@ -66,7 +66,7 @@ The lead is **AI governance in practice: governance that runs in the delivery sy
 1. **Hero**: the AI-governance lead (from the 30s pitch) + one-line positioning + two buttons (Talk to me / Read the writing).
 2. **What I do**: the three-bodies method (governance fails when only one body moves), who it is for, the "hands-on, on the hook for the outcome" promise.
 3. **Proof strip**: named past engagements under "Where I've done the work" (employment + consulting + advisory; see the allowed list above and ADR 0017).
-4. **Writing**: link out to Substack ("The Recovering CTO", at `writing.tilinthecloud.com` once live).
+4. **Writing**: link out to Substack ("Thiago de Faria", at `writing.tilinthecloud.com`).
 5. **Contact**: a book-a-call link + `info@tilinthecloud.com` (wire the contact form to that address).
 
 ## Landing copy (Thiago's voice: refine wording, keep the meaning)
@@ -89,7 +89,7 @@ The lead is **AI governance in practice: governance that runs in the delivery sy
 - **DNS** (configured at the registrar, not in this repo):
   - Four `A` records for the apex → GitHub Pages IPs: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
   - One `www` `CNAME` → the GitHub Pages host.
-  - One `writing` `CNAME` → Substack (`target.substack-custom-domains.com`) for the newsletter ("The Recovering CTO"). See ADR 0016.
+  - One `writing` `CNAME` → Substack (`target.substack-custom-domains.com`) for the newsletter ("Thiago de Faria"). See ADR 0016.
 - **The apex stays on GitHub Pages. NEVER point `tilinthecloud.com` at Substack, and never enable Substack's "root domain redirect" (it would hijack the front-page site, the exact failure this project undoes).**
 - **Email MX is independent. DO NOT TOUCH email DNS.**
 
