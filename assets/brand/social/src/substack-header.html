@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="_base.css"/>
+<style>
+  /* Substack homepage header (wordmark slot, 1344x256, about 5.25:1). One centered row
+     with wide side margins, so a center-crop on narrow screens keeps the masthead. */
+  html,body{ width:1344px; height:256px; }
+  body{
+    width:1344px; height:256px; overflow:hidden; position:relative;
+    background:
+      radial-gradient(40% 120% at 50% 0%, rgba(58,72,92,.30) 0%, transparent 70%),
+      radial-gradient(50% 140% at 50% 100%, rgba(204,122,59,.14) 0%, transparent 60%),
+      var(--ink);
+    color:var(--bone); font-family:"Switzer",sans-serif;
+    display:flex; align-items:center; justify-content:center; gap:34px;
+  }
+  .mark svg{ width:128px; height:128px; overflow:visible; display:block; }
+  .core{ filter:drop-shadow(0 0 12px rgba(204,122,59,.65)); }
+  .txt{ display:flex; flex-direction:column; gap:10px; }
+  h1{ font-family:"Clash Display",serif; font-weight:600; font-size:60px; line-height:1; letter-spacing:-.01em; }
+  h1 .cop{ color:var(--copper); }
+  p.sub{ font-size:21px; line-height:1.3; color:var(--bone-dim); font-weight:400; }
+</style></head>
+<body>
+  <div class="mark"><svg viewBox="0 0 400 400">
+    <g transform="rotate(0 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="13"/></g>
+    <g transform="rotate(60 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="13"/></g>
+    <g transform="rotate(120 200 200)"><ellipse class="ring" cx="200" cy="200" rx="150" ry="56"/><circle class="body" cx="350" cy="200" r="13"/></g>
+    <circle class="core" cx="200" cy="200" r="19"/></svg></div>
+  <div class="txt">
+    <h1>Proof in the <span class="cop">Pipeline</span></h1>
+    <p class="sub">Field notes on how teams ship with AI and keep it governed.</p>
+  </div>
+</body></html>
