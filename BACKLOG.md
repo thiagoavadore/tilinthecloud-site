@@ -167,6 +167,7 @@ task board and indexes them.
   LinkedIn and Substack covers still say "one program" (uploaded by hand, noted in the vault).
   Post Inspector kept the old images (LinkedIn caches by URL), so PR #14 (`060d82c`) adds `?v=2` to the
   share-image URLs; live check: all three pages serve `?v=2`, both images 200.
+- [x] **T43** Substack renamed "Thiago de Faria": writing card, CLAUDE.md mirror, Substack cover re-rendered. ADR 0022.
 ### In progress
 | ID | Task | Owner | Since |
 |----|------|-------|-------|
@@ -183,7 +184,7 @@ Grouped by priority (working-agreement rule 7). Triaged issues carry the matchin
 - (nothing queued)
 
 **Later**
-- [ ] **T39** Google Analytics (GA4) on the **Substack** ("The Recovering CTO",
+- [ ] **T39** Google Analytics (GA4) on the **Substack** ("Thiago de Faria",
   `writing.tilinthecloud.com`). Splits the newsletter half out of the old T29. No code, Substack
   injects the tag natively. `(needs: user, Substack admin)`
   - **Set up (user):** Substack **Dashboard → Settings → Analytics** (the "Advertising analytics"
